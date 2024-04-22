@@ -1,0 +1,19 @@
+.logo-icon {
+    position: absolute;
+    top: 4.963vh;
+    left: 8.403vw;
+    width: 6.243vw;
+    height: auto;
+    object-fit: contain;
+  }
+
+  @media (max-width: 768px) {
+  .logo-icon {
+    width: 7.813vw;
+    height: auto;
+    top: 2.383vh;
+    left: 5.078vw;
+
+
+  }
+}

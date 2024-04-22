@@ -1,0 +1,16 @@
+.todays-weather-forecast {
+    /*position: absolute;*/
+    position:static;
+    top: 77.171vh;
+    /*left: 949px;*/
+    left:2.778vw;
+}
+
+@media (max-width: 768px) {
+
+    .todays-weather-forecast {
+        position: static;
+      
+    }
+    
+}

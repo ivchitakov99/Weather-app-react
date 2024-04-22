@@ -1,0 +1,20 @@
+.weather-details {
+    /*position: absolute;*/
+    position:static;
+    top: 16.377vh;
+    /*left: 949px;*/
+    left:2.778vw;
+
+
+  
+  }
+
+  @media (max-width: 768px) { 
+  
+    .weather-details{
+    /*left:auto;*/
+    /*top:auto;*/
+    position:static;
+  }
+  
+}

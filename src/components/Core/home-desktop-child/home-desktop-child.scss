@@ -1,0 +1,182 @@
+
+.home-desktop-child {
+  position: absolute;
+  box-sizing: border-box;
+  top: 5.087vh;
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  height:auto;
+  /*width:auto;*/
+  left:auto;
+  right:100px;
+  /*padding-right:100px;*/
+  width:25.764vw;
+  
+}
+
+#weather-form {
+    display: flex;
+    justify-content: space-between; /* Adjusts the spacing between the elements */
+    align-items: center; /* Aligns the items vertically in the center */
+    /*width: 371px;*/
+    width:100%;
+    height: 50px;
+    gap:5px;
+    left:20px;
+    border-bottom: 1px solid var(--color-white);
+
+}
+  
+  
+#weather-form button {
+    border: none;
+    background: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#weather-form button:focus {
+    outline: none;
+}
+
+
+.search-location {
+    position: static;
+    /*top: 6.824vh;*/
+    /*left: 949px;*/
+    /*left: 2.778vw;*/
+    left:0;
+    top:1.117vh;
+    /*font-size: 1.389vw;*/
+    width:65%;
+    min-width: 166px;
+    font-size: 20px;
+    color: var(--color-gray-100);
+    text-shadow: 1px 0 0#000, 0 1px 0#000, -1px 0 0#000, 0-1px 0#000;
+    background: transparent;
+    border: none;
+    
+  }
+  
+  .search-location::placeholder {
+    color: var(--color-gray-100); 
+  }
+  
+  /* Add these lines to your CSS */
+  .search-location:focus {
+    background: transparent;
+    outline: none;
+  }
+  
+  .search-location:-webkit-autofill,
+  .search-location:-webkit-autofill:hover, 
+  .search-location:-webkit-autofill:focus, 
+  .search-location:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: var(--color-gray-100); /* Adjust this to match your desired text color */
+    
+  }
+
+
+.fasearch-icon1 {
+  /*top: 6.203vh;*/
+  /*left: 1275px;*/
+  position:static;
+  top:1.117vh;
+  left:22.639vw;
+  /*left: 25.417vw;*/
+  width: 1.944vw ;
+  height: 3.474vh; 
+  overflow: hidden;
+  
+}
+
+
+.search-history-icon {
+    /*
+    width: 24px;
+    height: 24px;
+    */
+    position:static;
+    fill: #ffffff;
+    /*margin-left: 8px;*/
+  
+    top:1.117vh;
+    left:18.486vw;
+    /*left: 25.417vw;*/
+    width: 1.944vw ;
+    height: 3.474vh; 
+    overflow: hidden;
+  
+  }
+
+
+
+
+  @media (max-width: 768px) {
+  .home-desktop-child {
+    
+    /*width: 305px;*/
+    height: 4.29vh;
+    /*width:305px;*/
+    width: auto;
+    height:auto;
+    
+    top: 1.239vh;
+    /*left: 55.208vw;*/
+    /*right: 5.078vw;*/
+    /*left:55.208vw;*/
+    left:auto;
+    right:35px;
+
+    position:fixed;
+    top: -435px;
+    
+
+  }
+
+  #weather-form {
+   
+    justify-content: space-between; /* Adjusts the spacing between the elements */
+    align-items: center; /* Aligns the items vertically in the center */
+    width:100%;
+    height:100%;
+    gap:5px;
+    
+  }
+
+  .search-location {
+    
+    width: 65%;
+    height: 21px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.09px;
+    text-align: left;
+    top:18px;
+    left:0;
+
+  }
+
+   
+
+
+  .fasearch-icon1{
+    width: 22px;
+    height: 21px;
+    top:18px;
+    /*left:283px;*/
+    right:0;
+
+  }
+
+  .search-history-icon {
+    width: 22px;
+    height: 21px;
+  }
+
+}
