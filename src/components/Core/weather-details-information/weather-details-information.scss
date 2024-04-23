@@ -237,9 +237,12 @@
         top:auto;
         position:static;
         width: 354px;
+        width:46.094vw;
         height: 290px;
         align-items: center;
         justify-content: flex-start;
+        font-size:18px;
+        /*line-height:16.41px;*/
         
     
     
@@ -276,6 +279,31 @@
     
       }
 
+
+
+  }
+
+
+
+
+
+  @media (max-width: 375px){
+    .weather-details-information{
+        left:auto;
+        top:auto;
+        position:static;
+        width: 285px;
+        width:76vw;
+        height: 261px;
+        align-items: center;
+        justify-content: flex-start;
+        font-size:14px;
+        line-height:16.41px;
+        
+    
+    
+      }
+    
 
 
   }

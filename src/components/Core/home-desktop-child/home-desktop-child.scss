@@ -9,7 +9,7 @@
   height:auto;
   /*width:auto;*/
   left:auto;
-  right:100px;
+  /*right:100px;*/
   /*padding-right:100px;*/
   width:25.764vw;
   
@@ -113,6 +113,17 @@
   
   }
 
+  .button-wrapper {
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+  }
+
+  .input-wrapper {
+    width:65%;
+    overflow:hidden;
+  }
+
 
 
 
@@ -135,6 +146,7 @@
     position:fixed;
     top: -435px;
     
+    
 
   }
 
@@ -142,7 +154,7 @@
    
     justify-content: space-between; /* Adjusts the spacing between the elements */
     align-items: center; /* Aligns the items vertically in the center */
-    width:100%;
+    width:95%;
     height:100%;
     gap:5px;
     
@@ -179,4 +191,78 @@
     height: 21px;
   }
 
+}
+
+
+
+@media (max-width: 375px) {
+
+  .home-desktop-child {
+    
+    /*width: 305px;*/
+    height: 4.29vh;
+    /*width:305px;*/
+    width: auto;
+    height:auto;
+    
+    top: 1.239vh;
+    /*left: 55.208vw;*/
+    /*right: 5.078vw;*/
+    /*left:55.208vw;*/
+    left:auto;
+    right:35px;
+    
+    position:fixed;
+    top: -230px;
+    width:140px;
+    
+    
+
+  }
+
+  #weather-form {
+    display:flex;
+    justify-content: space-between; /* Adjusts the spacing between the elements */
+    align-items: center; /* Aligns the items vertically in the center */
+    width:100%;
+    height:100%;
+    
+    
+  }
+
+ 
+
+  .search-location {
+    
+    width:100%;
+    height: 14px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.06px;
+    text-align: left;
+    top:21px;
+    
+
+  }
+
+   
+
+
+  .fasearch-icon1{
+    width: 12px;
+    height: 11px;
+    top:21px;
+    /*left:283px;*/
+    right:0;
+
+  }
+
+  .search-history-icon {
+    width: 12px;
+    height: 11px;
+  }
+
+  
+  
 }

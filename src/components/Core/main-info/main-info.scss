@@ -7,6 +7,7 @@
     left: 120px;
     */
     top: 68.983vh;
+    top: 556px;
     left: 8.333vw;
     
 }
@@ -71,6 +72,7 @@
     
     top: 25.453vh;
     left: 5.078vw;
+    top:267px;
   }
 
   .div {
@@ -102,6 +104,50 @@
 
   .cloudy-icon {
     width: 7.161vw;
+   
+   
+  }
+}
+
+
+@media (max-width: 375px) {
+
+  .main-info {
+    top: 19.086vh;
+    left: 5.867vw;
+    top:142px;
+  }
+ 
+
+  .div {
+    width:auto;
+    font-size: 64px;
+    line-height: 75px;
+  }
+
+  .city-parent{
+    width: auto;
+    height: auto;
+    
+  
+  }
+  
+  .city {
+    width: auto; 
+    font-size: 30px;
+    /*line-height: 56.25px;*/
+    
+  }
+
+  .time-date {
+    width: auto;
+    font-size:10px;
+    line-height: 11.72px;
+   
+  }
+
+  .cloudy-icon {
+    width: 40px;
    
    
   }

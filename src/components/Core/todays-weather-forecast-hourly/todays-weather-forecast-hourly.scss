@@ -9,7 +9,7 @@
     top:auto;
     position:static;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
     width: 24.583vw;
     height:auto;
     padding-right: 100px;
@@ -30,6 +30,7 @@
   .parent {
     position:absolute;
     height: 79.31%;
+    height:100%;
     width: 12.71%;
     top: 10.34%;
     right: 63.84%;
@@ -57,7 +58,7 @@
   width: 14.12%;
   top: 22.41%;
   left: 85.88%;
-  font-size: var(--font-size-5xl);
+  /*font-size: var(--font-size-5xl);*/
   color: var(--color-gray-100);
   text-align: right;
   display: flex;
@@ -66,7 +67,8 @@
 
 .desc-icon {
     position: absolute;
-    height: 82.76%;
+    /*height: 82.76%;*/
+    height:100%;
     width: 13.56%;
     top: 5.17%;
     right: 86.44%;
@@ -76,7 +78,7 @@
     overflow: hidden;
     max-height: 100%;
     object-fit: contain;
-    display:none;
+    /*display:none;*/
   }
 
 .forecast-card1,
@@ -103,8 +105,9 @@
         top:auto;
         position:static;
         flex-direction: column;
-        gap: 5px;
+        gap: 15px;
         width: 354px;
+        width:46.094vw;
         height:auto;
         padding-right:0;
         
@@ -114,4 +117,26 @@
         width:100%;
       }
     
+}
+
+
+@media (max-width: 375px) {
+
+  .todays-weather-forecast-hourly{
+      left:auto;
+      top:auto;
+      position:static;
+      flex-direction: column;
+      gap: 15px;
+      width: 285px;
+      width:76vw;
+      height:auto;
+      padding-right:0;
+      
+    }
+  
+    .forecast-card0, .forecast-card1, .forecast-card2, .forecast-card3, .forecast-card4{
+      width:100%;
+    }
+  
 }

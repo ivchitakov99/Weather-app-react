@@ -1,5 +1,6 @@
 import React from 'react';
 import './main-info.scss';
+import Clouds from "../../../img/Clouds.png";
 
 const MainInfo  = () => {
   return (
@@ -9,7 +10,7 @@ const MainInfo  = () => {
         <div className="city">Burgas</div>
         <div className="time-date">5:49 - Monday</div>
       </div>
-      <img className="cloudy-icon" id="title-img" alt="" style={{display: 'none'}} />
+      <img className="cloudy-icon" id="title-img" alt="" src={Clouds} /*style={{display: 'none'}}*/ />
     </div>
   );
 };
