@@ -1,75 +1,35 @@
 .group-parent {
-    /*width: 24.583vw;*/
     width:100%;
     position: relative;
     height: auto;
     display:flex;
     align-items: center;
     gap:20px;
-    
   }
 
 .temp-max-parent {
-  /*
-  position: absolute;
-  top: 0.372vh;
-  left: 0;
-  width: 21.806vw;
-  */
-  
-  height:100%;
-  display:flex;
-  /*position:static;*/
-  justify-content: space-between;
-  align-items: center;
-  width:90%
+ 
+    height:100%;
+    display:flex;
+    /*position:static;*/
+    justify-content: space-between;
+    align-items: center;
+    width:90%
 }
 
 .vector-icon {
-
-    /*position: absolute;*/
     height: 100%;
     width:auto;
-    /*max-width: 100%;*/
-    /*overflow: hidden;*/
-    
-    /*max-height: 100%;*/
-    
   }
 
 
 .temp-max {
-  /*position: absolute;*/
-  /*
-  top: 0;
-  left: 0;
-  */
-  /*display: inline-block;*/
-  width:auto;
-  height:auto;
-
-  /*position:static;*/
-  /*
-  width:auto;
-  height:auto;
-  */
- 
+    width:auto;
+    height:auto;
 }
 
-
 .div11 {
-    /*position:static;*/
     color: var(--color-white);
     width:auto;
     height:auto;
-    /*width: 1.917vw;*/
-    /*
-    width:auto;
-    height:auto;
-    /*
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    */
-    
   }

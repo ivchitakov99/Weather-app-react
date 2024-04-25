@@ -1,8 +1,6 @@
 .weather-details-information {
-    /*position: absolute;*/
     position:static;
     top: 25.434vh;
-    /*left: 949px;*/
     left:2.778vw;
     display: flex;
     flex-direction: column;
@@ -10,8 +8,6 @@
     justify-content: center;
     gap: 30px;
     color: var(--color-gray-100);
-  
-    /*width: 354px;*/
     width:24.583vw;
     height: 290px;
   }
@@ -25,202 +21,6 @@
     display: inline-block;
   }
 
-/*
-  .group-parent {
-    
-    width:100%;
-    position: relative;
-    height: 3.226vh;
-    
-  }
-
-
-.temp-max-parent,
-.temp-min-parent,
-.vector-icon {
- 
-  height: 2.605vh;
-
-
-  display:flex;
-  position:static;
-  justify-content: space-between;
-  align-items: center;
-  width:90%
-}
-
-.vector-icon {
-
-    position: absolute;
-    top: 0.372vh;
-    left: 0;
-    width: 21.806vw;
-    height: 2.605vh;
-    height: 100%;
-    width: 3.95%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 96.05%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-    
-  }
-
-
-.div11,
-.temp-max,
-.temp-min {
-  
-  
-  top: 0;
-  left: 0;
-  display: inline-block;
-  width: 6.389vw;
-
-  position:static;
-  width:auto;
-  height:auto;
- 
-}
-
-
-.div11 {
-    position:static;
-    left: 19.889vw;
-    color: var(--color-white);
-   
-    width:auto;
-    height:auto;
-   
-    
-  }
-*/
-/*
-  .outline-parent {
-   
-    width:100%;
-    position: relative;
-    height: 2.978vh;
-  }
-
-
-  .outline-icon {
-    position: absolute;
-    height: 100%;
-    width: 5.08%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 94.92%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-  }
-
-  .humadity-parent {
-    height: 2.605vh;
-    display:flex;
-    position:static;
-    justify-content: space-between;
-    align-items: center;
-    width:90%
-  }
-
-  .humadity {
-    top: 0;
-    left: 0;
-
-    position:static;
-    width:auto;
-    height:auto;
-  }
-
-  .div13 {
-    position:static;
-    width:auto;
-    height:auto;
-  
-    left: 19.889vw;
-    color: var(--color-white);
-    width: 1.917vw;
-   
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  .outline-group {
-    
-    width:100%;
-    position: relative;
-    height: 2.73vh;
-  }
-
-  .outline-icon1 {
-    position: absolute;
-    height: 100%;
-    width: 6.21%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 93.79%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-  }
-
-  .cloudy-parent {
-    height: 2.605vh;
-  
-    display:flex;
-    position:static;
-    justify-content: space-between;
-    align-items: center;
-    width:90%
-  }
-
-  .outline-container {
-    
-    width:100%;
-    position: relative;
-    height: 2.605vh;
-  }
-
-.kmh, .outline-icon2 {
-    position: absolute;
-    top: 0;
-}
-
-.outline-icon2 {
-    height: 90.48%;
-    width: 6.78%;
-    right: 0;
-    bottom: 9.52%;
-    left: 93.22%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
-
-.kmh {
-    left: 16.972vw;
-    color: var(--color-white);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    
-    width: 4.861vw;
-
-    position:static;
-    width:auto;
-    height:auto;
-    
-  }
-
-*/
-
 
   @media (max-width: 768px){
     .weather-details-information{
@@ -233,15 +33,10 @@
         align-items: center;
         justify-content: flex-start;
         font-size:18px;
-        /*line-height:16.41px;*/
-        
-    
-    
       }
     
       .weather-details-information > div {
         width: 100%;
-        /* Other properties... */
       }
     
       .weather-details-information-title{
@@ -266,17 +61,8 @@
         justify-content: space-between;
         align-items: center;
         width:90%
-    
-    
       }
-
-
-
   }
-
-
-
-
 
   @media (max-width: 375px){
     .weather-details-information{
@@ -290,11 +76,5 @@
         justify-content: flex-start;
         font-size:14px;
         line-height:16.41px;
-        
-    
-    
       }
-    
-
-
   }

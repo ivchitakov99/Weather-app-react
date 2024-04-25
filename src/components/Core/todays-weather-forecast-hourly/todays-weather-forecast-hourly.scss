@@ -1,10 +1,8 @@
 .todays-weather-forecast-hourly {
     display: flex;
-    /*flex-direction: row;*/
     align-items: flex-start;
     justify-content: flex-start; /* Aligns items along the vertical line */
     flex-wrap: wrap; /* Allows the items to wrap onto multiple lines */
-
     left:auto;
     top:auto;
     position:static;
@@ -14,83 +12,7 @@
     height:auto;
     padding-right: 100px;
   }
-/*
-  .forecast-card0 {
-    
-    position:relative;
-    height: 7.196vh;
-    width:100%;
-  }  
 
-  .parent {
-    position:absolute;
-    height: 79.31%;
-    height:100%;
-    width: 12.71%;
-    top: 10.34%;
-    right: 63.84%;
-    bottom: 10.34%;
-    left: 23.45%;
-  }
-
-.div1 {
-    
-    top: 0;
-    left: 0;
-}
-
-.desc {
-    top: 54.35%;
-    left: 0;
-    color: var(--color-gray-100);
-    position: absolute;
-}
-
-
-.div2 {
-  position: absolute;
-  height: 55.17%;
-  width: 14.12%;
-  top: 22.41%;
-  left: 85.88%;
-  
-  color: var(--color-gray-100);
-  text-align: right;
-  display: flex;
-  align-items: center;
-}
-
-.desc-icon {
-    position: absolute;
-    
-    height:100%;
-    width: 13.56%;
-    top: 5.17%;
-    right: 86.44%;
-    bottom: 12.07%;
-    left: 0;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-    object-fit: contain;
-    
-
-   
-  }
-  
-
-.forecast-card1,
-.forecast-card2,
-.forecast-card3,
-.forecast-card4 {
- 
-  position:relative;
-  width: 24.583vw;
-  height: 7.196vh;
-
-  width:100%;
-}
-*/
 
 @media (max-width: 768px) {
 
@@ -104,13 +26,8 @@
         width:46.094vw;
         height:auto;
         padding-right:0;
-        
       }
-    /*
-      .forecast-card0, .forecast-card1, .forecast-card2, .forecast-card3, .forecast-card4{
-        width:100%;
-      }
-      */
+    
     
 }
 
@@ -127,12 +44,7 @@
       width:76vw;
       height:auto;
       padding-right:0;
-      
     }
-    /*
-    .forecast-card0, .forecast-card1, .forecast-card2, .forecast-card3, .forecast-card4{
-      width:100%;
-    }
-    */
+    
   
 }

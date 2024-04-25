@@ -1,12 +1,6 @@
 .bg-blur {
     position: absolute;
-    /*
-    top: 3px;
-    left: 909px;
-    */
-    
     top:3px;
-    /*right:0;*/
     right:0;
     background-color: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(7px);
@@ -14,7 +8,6 @@
     box-sizing: border-box;
     width: 36.875vw;
     height: 149.504vh;
-    /*text-align: left;*/
     gap:50px;
     padding-top: 130px;
     padding-top:16.129vh;
@@ -32,10 +25,6 @@
   @media (max-width: 768px) { 
     .bg-blur {
         position: absolute;
-        /*
-        width: 767px;
-        height: 1084px;
-        */
         width:99.87vw;
         height:103.337vh;
         min-height:1084px;
@@ -51,29 +40,17 @@
         gap:45px;
         padding-top:140px;
         padding-left:20px;
-
         font-size: 18px;
         line-height: 21.09px;
-        
-        
-    
       }
-
-    
 }
 
 
 @media (max-width: 375px) { 
   .bg-blur {
       position: absolute;
-      /*
-      width:375px;
-      height:990px;
-      */
       width:100vw;
       height:133.065vh;
-
-
       min-height:990px;
       top: 247px;
       right:0;
@@ -86,12 +63,8 @@
       justify-content: flex-start;
       gap:40px;
       padding-top:140px;
-
       font-size: 14px;
       line-height: 16.41px;
-  
     }
-
-  
 }
   
