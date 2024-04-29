@@ -1,0 +1,1 @@
+export {default as SearchHistoryContainer} from "./search-history-container.jsx"

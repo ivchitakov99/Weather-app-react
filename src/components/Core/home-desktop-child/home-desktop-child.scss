@@ -1,4 +1,3 @@
-
 .home-desktop-child {
   position: absolute;
   box-sizing: border-box;
@@ -69,7 +68,6 @@
   .search-location:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
     -webkit-text-fill-color: var(--color-gray-100); /* Adjust this to match your desired text color */
-    
   }
 
 
@@ -80,12 +78,10 @@
   width: 1.944vw ;
   height: 3.474vh; 
   overflow: hidden;
-  
 }
 
 
 .search-history-icon {
-    
     position:static;
     fill: #ffffff;
     top:1.117vh;
@@ -93,7 +89,6 @@
     width: 1.944vw ;
     height: 3.474vh; 
     overflow: hidden;
-  
   }
 
   .button-wrapper {
@@ -106,9 +101,6 @@
     width:65%;
     overflow:hidden;
   }
-
-
-
 
   @media (max-width: 768px) {
   .home-desktop-child {
@@ -123,17 +115,14 @@
   }
 
   #weather-form {
-   
     justify-content: space-between; /* Adjusts the spacing between the elements */
     align-items: center; /* Aligns the items vertically in the center */
     width:95%;
     height:100%;
     gap:5px;
-    
   }
 
   .search-location {
-    
     width: 65%;
     height: 21px;
     font-family: Roboto;
@@ -145,15 +134,11 @@
     left:0;
   }
 
-   
-
-
   .fasearch-icon1{
     width: 22px;
     height: 21px;
     top:18px;
     right:0;
-
   }
 
   .search-history-icon {
@@ -168,7 +153,6 @@
 @media (max-width: 375px) {
 
   .home-desktop-child {
-    
     height: 4.29vh;
     width: auto;
     height:auto;
@@ -187,8 +171,6 @@
     width:100%;
     height:100%;
   }
-
- 
 
   .search-location {
     width:100%;

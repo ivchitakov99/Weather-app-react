@@ -1,12 +1,8 @@
 .search-history-container {
     display:none;
     position:absolute;
-    /*background-color: rgba(255, 255, 255, 0.9);*/
     padding: 20px;
-    /*border-radius: 8px;*/
-    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
     z-index: 999;
-    /*width: 300px;*/
     min-height: 100vh;
     overflow-y: auto;
     left:0;
@@ -37,17 +33,11 @@
     cursor: pointer;
   }
   
-  
-  
   .search-history-container h2 {
     margin-top: 20px;
     text-align: center;
     color: var(--color-gray-100);
     text-shadow: 1px 0 0#000, 0 1px 0#000, -1px 0 0#000, 0-1px 0#000;
-    /*
-    background: transparent;
-    border: none;
-    */
     font-family: Roboto;
     font-weight: 400;
   }

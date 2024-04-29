@@ -2,7 +2,6 @@ import React from 'react';
 import './home-desktop-child.scss'; 
 import searchIcon from "../../../img/fasearch.svg";
 
-// HomeDesktopChild Component
 const HomeDesktopChild = () => (
     <div className="home-desktop-child" >
         <form id="weather-form">

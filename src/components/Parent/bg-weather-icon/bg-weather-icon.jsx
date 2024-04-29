@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './bg-weather-icon.scss';
 
 function BgWeatherIcon() {

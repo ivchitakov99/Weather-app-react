@@ -11,9 +11,7 @@ const TodaysWeatherForecastHourlyComponent = ({ div1, desc, div2, imgSrc }) => {
                 <div className="desc">{desc}</div>
             </div>
         </div>
-        
         <div className="div2">{div2}</div>
-    
     </div>
   );
 };

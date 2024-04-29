@@ -1,10 +1,8 @@
 import React, {useContext} from 'react';
 import './todays-weather-forecast-hourly.scss';
-import TodaysWeatherForecastHourlyComponent from '../todays-w-f-h-component/todays-w-f-h-component';
+import {TodaysWeatherForecastHourlyComponent} from '../todays-w-f-h-component';
 import { ForecastContext } from '../../Parent/bg-blur/bg-blur'; //
 
-
-// TodaysWeatherForecastHourly Component
 const TodaysWeatherForecastHourly = () => {
     const forecastData = useContext(ForecastContext);
     return (
@@ -15,6 +13,5 @@ const TodaysWeatherForecastHourly = () => {
     </div>
     )
 };
-
 
 export default TodaysWeatherForecastHourly;
