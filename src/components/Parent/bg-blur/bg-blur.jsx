@@ -21,5 +21,3 @@ const BgBlur = () => {
 }
 
 export default BgBlur;
-export const WeatherContext = React.createContext();
-export const ForecastContext = React.createContext();
