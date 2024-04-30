@@ -1,0 +1,192 @@
+.home-desktop-child {
+  position: absolute;
+  box-sizing: border-box;
+  top: 5.087vh;
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  height:auto;
+  left:auto;
+  width:25.764vw;
+}
+
+#weather-form {
+    display: flex;
+    justify-content: space-between; /* Adjusts the spacing between the elements */
+    align-items: center; /* Aligns the items vertically in the center */
+    width:100%;
+    height: 50px;
+    gap:5px;
+    left:20px;
+    border-bottom: 1px solid var(--color-white);
+}
+  
+  
+#weather-form button {
+    border: none;
+    background: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#weather-form button:focus {
+    outline: none;
+}
+
+
+.search-location {
+    position: static;
+    left:0;
+    top:1.117vh;
+    width:65%;
+    min-width: 166px;
+    font-size: 20px;
+    color: var(--color-gray-100);
+    text-shadow: 1px 0 0#000, 0 1px 0#000, -1px 0 0#000, 0-1px 0#000;
+    background: transparent;
+    border: none;
+  }
+  
+  .search-location::placeholder {
+    color: var(--color-gray-100); 
+  }
+  
+  /* Add these lines to your CSS */
+  .search-location:focus {
+    background: transparent;
+    outline: none;
+  }
+  
+  .search-location:-webkit-autofill,
+  .search-location:-webkit-autofill:hover, 
+  .search-location:-webkit-autofill:focus, 
+  .search-location:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: var(--color-gray-100); /* Adjust this to match your desired text color */
+  }
+
+
+.fasearch-icon1 {
+  position:static;
+  top:1.117vh;
+  left:22.639vw;
+  width: 1.944vw ;
+  height: 3.474vh; 
+  overflow: hidden;
+}
+
+
+.search-history-icon {
+    position:static;
+    fill: #ffffff;
+    top:1.117vh;
+    left:18.486vw;
+    width: 1.944vw ;
+    height: 3.474vh; 
+    overflow: hidden;
+  }
+
+  .button-wrapper {
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+  }
+
+  .input-wrapper {
+    width:65%;
+    overflow:hidden;
+  }
+
+  @media (max-width: 768px) {
+  .home-desktop-child {
+    height: 4.29vh;
+    width: auto;
+    height:auto;
+    top: 1.239vh;
+    left:auto;
+    right:35px;
+    position:fixed;
+    top: -435px;
+  }
+
+  #weather-form {
+    justify-content: space-between; /* Adjusts the spacing between the elements */
+    align-items: center; /* Aligns the items vertically in the center */
+    width:95%;
+    height:100%;
+    gap:5px;
+  }
+
+  .search-location {
+    width: 65%;
+    height: 21px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.09px;
+    text-align: left;
+    top:18px;
+    left:0;
+  }
+
+  .fasearch-icon1{
+    width: 22px;
+    height: 21px;
+    top:18px;
+    right:0;
+  }
+
+  .search-history-icon {
+    width: 22px;
+    height: 21px;
+  }
+}
+
+
+
+@media (max-width: 375px) {
+  .home-desktop-child {
+    height: 4.29vh;
+    width: auto;
+    height:auto;
+    top: 1.239vh;
+    left:auto;
+    right:35px;
+    position:fixed;
+    top: -230px;
+    width:140px;
+  }
+
+  #weather-form {
+    display:flex;
+    justify-content: space-between; /* Adjusts the spacing between the elements */
+    align-items: center; /* Aligns the items vertically in the center */
+    width:100%;
+    height:100%;
+  }
+
+  .search-location {
+    width:100%;
+    height: 14px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.06px;
+    text-align: left;
+    top:21px;
+  }
+
+  .fasearch-icon1{
+    width: 12px;
+    height: 11px;
+    top:21px;
+    right:0;
+  }
+
+  .search-history-icon {
+    width: 12px;
+    height: 11px;
+  }
+}

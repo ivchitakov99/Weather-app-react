@@ -1,0 +1,1 @@
+export {default as BgWeatherIcon} from "./bg-weather-icon.jsx"

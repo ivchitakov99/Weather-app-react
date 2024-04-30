@@ -1,0 +1,43 @@
+.todays-weather-forecast-hourly {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start; /* Aligns items along the vertical line */
+    flex-wrap: wrap; /* Allows the items to wrap onto multiple lines */
+    left:auto;
+    top:auto;
+    position:static;
+    flex-direction: column;
+    gap: 15px;
+    width: 24.583vw;
+    height:auto;
+    padding-right: 100px;
+  }
+
+
+@media (max-width: 768px) {
+    .todays-weather-forecast-hourly{
+        left:auto;
+        top:auto;
+        position:static;
+        flex-direction: column;
+        gap: 15px;
+        width: 354px;
+        width:46.094vw;
+        height:auto;
+        padding-right:0;
+      }   
+}
+
+@media (max-width: 375px) {
+  .todays-weather-forecast-hourly{
+      left:auto;
+      top:auto;
+      position:static;
+      flex-direction: column;
+      gap: 10px;
+      width: 285px;
+      width:76vw;
+      height:auto;
+      padding-right:0;
+    }
+}

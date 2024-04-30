@@ -1,0 +1,23 @@
+.home-desktop-item {
+    position:static;
+    box-sizing: border-box;
+    top: 65.881vh;
+    left:2.431vw;
+    width: 25.764vw;
+    height: 50px;
+    border-bottom: 1px solid var(--color-white);
+}  
+
+@media (max-width: 768px) {
+    .home-desktop-item{
+        width: 371px;
+        height: 50px;
+        position:static;
+    }
+}
+
+@media (max-width: 375px) {
+    .home-desktop-item{
+        width: 285px;
+    }
+}

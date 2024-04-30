@@ -1,0 +1,1 @@
+export {default as WeatherDetailsInformation} from "./weather-details-information.jsx"

@@ -1,0 +1,33 @@
+.group-parent {
+    width:100%;
+    position: relative;
+    height: auto;
+    display:flex;
+    align-items: center;
+    gap:20px;
+  }
+
+.temp-max-parent {
+    height:100%;
+    display:flex;
+    /*position:static;*/
+    justify-content: space-between;
+    align-items: center;
+    width:90%
+}
+
+.vector-icon {
+    height: 100%;
+    width:auto;
+  }
+
+.temp-max {
+    width:auto;
+    height:auto;
+}
+
+.div11 {
+    color: var(--color-white);
+    width:auto;
+    height:auto;
+  }
