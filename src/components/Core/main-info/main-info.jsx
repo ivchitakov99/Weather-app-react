@@ -1,4 +1,3 @@
-import React, { useContext, useEffect, useState } from 'react';
 import './main-info.scss';
 import { useWeatherData } from '../../contexts/WeatherContext';
 

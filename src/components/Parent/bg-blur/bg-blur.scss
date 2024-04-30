@@ -18,7 +18,8 @@
     align-items: flex-start;
     width:auto;
     padding-right:20px;
-    min-height: 1205px;
+    min-height: 1305px;
+    
   }
 
   @media (max-width: 768px) { 
@@ -26,7 +27,7 @@
         position: absolute;
         width:99.87vw;
         height:103.337vh;
-        min-height:1084px;
+        min-height:1284px;
         top: 452px;
         right:0;
         bottom: 0;
@@ -37,7 +38,7 @@
         flex-wrap:nowrap;
         justify-content: flex-start;
         gap:45px;
-        padding-top:140px;
+        padding-top:110px;
         padding-left:20px;
         font-size: 18px;
         line-height: 21.09px;
@@ -49,7 +50,7 @@
       position: absolute;
       width:100vw;
       height:133.065vh;
-      min-height:990px;
+      min-height:1190px;
       top: 247px;
       right:0;
       bottom: 0;

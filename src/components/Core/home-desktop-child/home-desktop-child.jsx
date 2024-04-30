@@ -1,16 +1,39 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './home-desktop-child.scss'; 
 import searchIcon from "../../../img/fasearch.svg";
 
-const HomeDesktopChild = () => (
+
+const HomeDesktopChild = ({ fetchWeatherData}) => {
+
+  const [city, setCity] = useState('');
+
+  const handleInputChange = (event) => {
+    setCity(event.target.value);
+  };
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault(); // Prevent the default form submit action
+    if (city) {
+      await fetchWeatherData(city); // Fetch the weather data and pass it to BgBlur
+    }
+  };
+    
+  return (
     <div className="home-desktop-child" >
-        <form id="weather-form">
-        <div className="input-wrapper">
-            <input type="text" id="city" className="search-location" placeholder="Search Location..." />
+        <form id="weather-form" onSubmit={handleFormSubmit}>
+          <div className="input-wrapper">
+            <input
+                type="text"
+                id="city"
+                className="search-location"
+                placeholder="Search Location..."
+                value={city}
+                onChange={handleInputChange}
+            />
           </div>
           <div className="button-wrapper">
             <button type="submit" id="myButton">
-              <img className="fasearch-icon1" alt="" src={searchIcon} />
+              <img className="fasearch-icon1" alt="Search" src={searchIcon} />
             </button>
             <button type="button" id="search-history-btn">
               <svg className="search-history-icon" viewBox="0 0 24 24">
@@ -20,7 +43,8 @@ const HomeDesktopChild = () => (
           </div>
         </form>
     </div>
-  );
+  )
+};
 
 export default HomeDesktopChild;    
 

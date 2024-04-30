@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import './weather-details-information.scss';
 import {WeatherDetailsInfoComp} from '../weather-details-info-comp';
-import {WeatherContext} from "../../Parent/bg-blur/bg-blur"
+import {WeatherContext} from "../../Parent/bg-blur"
 
 const WeatherDetailsInformation = () => {
 
