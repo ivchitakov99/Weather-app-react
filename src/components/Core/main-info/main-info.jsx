@@ -1,11 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './main-info.scss';
-import { useWeatherData } from '../../contexts/WeatherContext';
 
 const MainInfo = () => {
-  
-  const weatherData = useWeatherData();
-
   return (
     <div className="main-info">
       {weatherData.temperature ? (

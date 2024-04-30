@@ -26,14 +26,9 @@
     justify-content: space-around;
 }
 
-.div1 {
-    
-}
-
 .desc {
     color: var(--color-gray-100);
 }
-
 
 .div2 {
     height:auto;
@@ -42,15 +37,18 @@
 }
 
 .desc-icon {
-    height:auto;
-    width:auto;
-  }
-
+  height:58px;
+  width:58px;
+}
  
-
 @media (max-width: 768px) {
   .left-side {
     height:90%;
+  }
+
+  .desc-icon {
+    height: 48px;
+    width:48px;
   }
 }
 
@@ -58,5 +56,10 @@
 @media (max-width: 375px) {
   .left-side {
     height:80%;
+  }
+
+  .desc-icon {
+    height:42px;
+    width:42px;
   }
 }
