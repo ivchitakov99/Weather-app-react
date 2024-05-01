@@ -116,12 +116,18 @@ const BgBlur = () => {
     <div className="bg-blur">
       <HomeDesktopChild fetchWeatherData={handleFetchWeatherData}></HomeDesktopChild>  
       <WeatherDetails />
-      <WeatherDetailsInformation />
+      <WeatherContext.Provider value={weatherData}>
+        <WeatherDetailsInformation />
+      </WeatherContext.Provider>
       <HomeDesktopItem />
       <TodaysWeatherForecast />
-      <TodaysWeatherForecastHourly />
+      <ForecastContext.Provider value={forecastData}>
+        <TodaysWeatherForecastHourly />
+      </ForecastContext.Provider>
     </div>
   );
 }
 
 export default BgBlur;
+export const WeatherContext = React.createContext();
+export const ForecastContext = React.createContext();
