@@ -1,4 +1,4 @@
-import React , {useState, useEffect, useMemo } from 'react';
+import React , {useState, useEffect, useMemo, useCallback} from 'react';
 import './bg-blur.scss'; 
 import {WeatherDetails} from '../../Core/weather-details';
 import {WeatherDetailsInformation} from '../../Core/weather-details-information';
@@ -21,7 +21,7 @@ const BgBlur = () => {
     const [weatherDataAPI, setweatherDataAPI] = useState(null);
 
      // Function to fetch weather data and update state
-     const handleFetchWeatherData = async (city) => {
+    const handleFetchWeatherData = useCallback(async (city) => {
       try {
         const data = await fetchWeatherData(city);
         setweatherDataAPI(data); // Update the weather data state
@@ -29,7 +29,7 @@ const BgBlur = () => {
       } catch (error) {
         console.error('Failed to fetch weather data:', error);
       }
-    };
+    }, []);
     
     useEffect(() => {
       // This will run only once on component mount and fetch the data
