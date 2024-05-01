@@ -6,6 +6,7 @@ import {HomeDesktopItem} from '../../Core/home-desktop-item';
 import {TodaysWeatherForecast} from '../../Core/todays-weather-forecast';
 import {TodaysWeatherForecastHourly} from '../../Core/todays-weather-forecast-hourly';
 import {HomeDesktopChild} from '../../Core/home-desktop-child';
+import {useWeatherUpdater} from '../../contexts/WeatherContext';
 import Snow from "../../../img/Snow.png";
 import Clouds from "../../../img/Clouds.png";
 import TEMP_RED from "../../../img/vector1.svg";
@@ -44,7 +45,7 @@ const BgBlur = () => {
       // ... other mappings
     }), []); // Dependencies array is empty as these images likely don't change
     
-    /*const setWeatherData = useWeatherUpdater();*/
+    const setWeatherData = useWeatherUpdater();
    
     useEffect(() => {
       if (weatherDataAPI) {
@@ -63,7 +64,7 @@ const BgBlur = () => {
           imgSrc: weatherImages[forecast.weather[0].main] || Snow,
         });
       }
-    }, [weatherDataAPI, /*setWeatherData,*/ weatherImages]); // This will run when weatherDataAPI is updated
+    }, [weatherDataAPI, setWeatherData, weatherImages]);
 
 
     // Update weatherData array with fetched data if available
