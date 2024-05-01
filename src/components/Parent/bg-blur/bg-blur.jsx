@@ -1,4 +1,4 @@
-import React , {useState, useEffect } from 'react';
+import React , {useState, useEffect, useMemo } from 'react';
 import './bg-blur.scss'; 
 import {WeatherDetails} from '../../Core/weather-details';
 import {WeatherDetailsInformation} from '../../Core/weather-details-information';
@@ -36,13 +36,13 @@ const BgBlur = () => {
       handleFetchWeatherData('Burgas');
     }, [handleFetchWeatherData]); // Empty dependency array ensures this runs only once on mount
     
-    const weatherImages = () => ({
+    const weatherImages = useMemo(() => ({
       Rain: Rain,
       Snow: Snow,
       Clouds: Clouds,
       Clear: Clear
       // ... other mappings
-    }); // Dependencies array is empty as these images likely don't change
+    }), []); // Dependencies array is empty as these images likely don't change
     
     /*const setWeatherData = useWeatherUpdater();*/
    
@@ -67,7 +67,7 @@ const BgBlur = () => {
 
 
     // Update weatherData array with fetched data if available
-    const weatherData = () => weatherDataAPI ? [
+    const weatherData = useMemo(() => weatherDataAPI ? [
       {
         tempMax: "Temp max",
         div11: `${Math.round(weatherDataAPI.list[0].main.temp_max - 273.15)}°`,
@@ -93,11 +93,11 @@ const BgBlur = () => {
         div11: `${Math.round(weatherDataAPI.list[0].wind.speed * 3.6)}km/h`,
         imgSrc: Windy,
       },
-    ] : [];
+    ] : [], [weatherDataAPI]);
 
 
     // Dynamically generate forecastData based on weatherDataAPI
-    const forecastData = () => weatherDataAPI
+    const forecastData = useMemo(() => weatherDataAPI
     ? weatherDataAPI.list.slice(0, 8).map((forecast) => {
         const dateTime = new Date(forecast.dt * 1000); // Convert UNIX timestamp to JS Date object
         const timeOptions = { hour: '2-digit', minute: '2-digit', hour12: false };
@@ -110,7 +110,7 @@ const BgBlur = () => {
           imgSrc: weatherImages[forecast.weather[0].main] || Snow
         };
       })
-    : [];
+    : [], [weatherDataAPI, weatherImages]);
 
     return (
     <div className="bg-blur">
