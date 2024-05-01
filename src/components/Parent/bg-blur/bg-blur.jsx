@@ -1,4 +1,4 @@
-import React , { useState } from 'react';
+import React , {useState, useEffect } from 'react';
 import './bg-blur.scss'; 
 import {WeatherDetails} from '../../Core/weather-details';
 import {WeatherDetailsInformation} from '../../Core/weather-details-information';
@@ -30,10 +30,11 @@ const BgBlur = () => {
         console.error('Failed to fetch weather data:', error);
       }
     };
-
     
-    handleFetchWeatherData('Burgas');
-    
+    useEffect(() => {
+      // This will run only once on component mount and fetch the data
+      handleFetchWeatherData('Burgas');
+    }, [handleFetchWeatherData]); // Empty dependency array ensures this runs only once on mount
     
     const weatherImages = () => ({
       Rain: Rain,
@@ -43,9 +44,9 @@ const BgBlur = () => {
       // ... other mappings
     }); // Dependencies array is empty as these images likely don't change
     
+    /*const setWeatherData = useWeatherUpdater();*/
    
-   
-    {
+    useEffect(() => {
       if (weatherDataAPI) {
         const forecast = weatherDataAPI.list[0];
         const date = new Date(forecast.dt*1000);
@@ -62,7 +63,7 @@ const BgBlur = () => {
           imgSrc: weatherImages[forecast.weather[0].main] || Snow,
         });
       }
-    }
+    }, [weatherDataAPI, /*setWeatherData,*/ weatherImages]); // This will run when weatherDataAPI is updated
 
 
     // Update weatherData array with fetched data if available
