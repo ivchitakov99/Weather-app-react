@@ -1,11 +1,11 @@
-import React /*, {useState}*/ from 'react';
+import React, {useState} from 'react';
 import './home-desktop-child.scss'; 
 import searchIcon from "../../../img/fasearch.svg";
 
 
 const HomeDesktopChild = ({fetchWeatherData}) => {
 
-  /*const [city, setCity] = useState('');*/
+  const [city, setCity] = useState('');
 
   const handleInputChange = (event) => {
     setCity(event.target.value);

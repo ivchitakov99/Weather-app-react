@@ -1,4 +1,4 @@
-import React , { useEffect } from 'react';
+import React , { useState } from 'react';
 import './bg-blur.scss'; 
 import {WeatherDetails} from '../../Core/weather-details';
 import {WeatherDetailsInformation} from '../../Core/weather-details-information';
@@ -18,7 +18,7 @@ import fetchWeatherData from '../../services/weatherService';
 
 const BgBlur = () => {
 
-    /*const [weatherDataAPI, setweatherDataAPI] = useState(null);*/
+    const [weatherDataAPI, setweatherDataAPI] = useState(null);
 
      // Function to fetch weather data and update state
      const handleFetchWeatherData = async (city) => {
