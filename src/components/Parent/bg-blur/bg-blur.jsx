@@ -16,11 +16,16 @@ import Cloudy from "../../../img/cloudy.svg";
 import Windy from "../../../img/windy.svg";
 import Clear from "../../../img/Clear.png"
 import fetchWeatherData from '../../services/weatherService';
+import { useWeatherDataAPI, useWeatherFetch } from '../../contexts/WeatherFetchContext';
+
 
 const BgBlur = () => {
 
-    const [weatherDataAPI, setweatherDataAPI] = useState(null);
-
+    /*const [weatherDataAPI, setweatherDataAPI] = useState(null);*/
+    const weatherDataAPI = useWeatherDataAPI();
+    const fetchAndUpdateWeather = useWeatherFetch();
+    
+    /*
      // Function to fetch weather data and update state
     const handleFetchWeatherData = useCallback(async (city) => {
       try {
@@ -31,12 +36,13 @@ const BgBlur = () => {
         console.error('Failed to fetch weather data:', error);
       }
     }, []);
-    
+    */
+    /*
     useEffect(() => {
       // This will run only once on component mount and fetch the data
-      handleFetchWeatherData('Burgas');
-    }, [handleFetchWeatherData]); // Empty dependency array ensures this runs only once on mount
-    
+      fetchAndUpdateWeather('Burgas');
+    }, [fetchAndUpdateWeather]); // Empty dependency array ensures this runs only once on mount
+    */
     const weatherImages = useMemo(() => ({
       Rain: Rain,
       Snow: Snow,
@@ -115,7 +121,7 @@ const BgBlur = () => {
 
     return (
     <div className="bg-blur">
-      <HomeDesktopChild fetchWeatherData={handleFetchWeatherData}></HomeDesktopChild>  
+      <HomeDesktopChild></HomeDesktopChild>  
       <WeatherDetails />
       <WeatherContext.Provider value={weatherData}>
         <WeatherDetailsInformation />
@@ -132,3 +138,4 @@ const BgBlur = () => {
 export default BgBlur;
 export const WeatherContext = React.createContext();
 export const ForecastContext = React.createContext();
+
