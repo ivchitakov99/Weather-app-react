@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import './search-history-container.scss'; 
 import { useSearchContext } from '../../contexts/SearchContext';
 import { useWeatherFetch } from '../../contexts/WeatherFetchContext';
 
 const SearchHistoryContainer = () => {
+    console.log("SearchHistoryContainer rendering");
     const [searchHistory, setSearchHistory] = useState([]);
     const { showSearchHistory, setShowSearchHistory } = useSearchContext();
     const fetchAndUpdateWeather = useWeatherFetch(); // Use the context hook
    
-    const handleButtonClick = () => {
-      // Hide both components when the close button is clicked
+    const handleButtonClick = useCallback(() => {
       setShowSearchHistory(false);
-    };
+    }, [setShowSearchHistory]); // Dependency array includes setShowSearchHistory
 
     useEffect(() => {
       const handleStorageUpdate = () => {
@@ -21,6 +21,8 @@ const SearchHistoryContainer = () => {
   
       // Add event listener for the custom event
       window.addEventListener('storageUpdated', handleStorageUpdate);
+
+      window.dispatchEvent(new Event('storageUpdated'));
   
       // Remove event listener on cleanup
       return () => {
@@ -28,10 +30,18 @@ const SearchHistoryContainer = () => {
       };
     }, []);
   
-    const handleCityClick = async (city) => {
-      await fetchAndUpdateWeather(city); // Use the context function to fetch weather data
+    const handleCityClick = useCallback(async (city) => {
+      await fetchAndUpdateWeather(city);
       setShowSearchHistory(false);
-    };
+    }, [fetchAndUpdateWeather, setShowSearchHistory]); // Dependencies are fetchAndUpdateWeather and setShowSearchHistory
+
+    const searchHistoryListItems = useMemo(() => {
+      return searchHistory.map((city, index) => (
+        <li key={index} onClick={() => handleCityClick(city)}>
+          {city}
+        </li>
+      ));
+    }, [searchHistory, handleCityClick]);
 
     return showSearchHistory && searchHistory ? (
       <div className="search-history-container">
@@ -40,11 +50,7 @@ const SearchHistoryContainer = () => {
           <button className="close-btn" onClick={handleButtonClick}>&times;</button>
         </div>
         <ul id="search-history-list">
-          {searchHistory.map((city, index) => (
-            <li key={index} onClick={() => handleCityClick(city)}>
-              {city}
-            </li>
-          ))}
+          {searchHistoryListItems}
         </ul>
       </div>
     ) : null;

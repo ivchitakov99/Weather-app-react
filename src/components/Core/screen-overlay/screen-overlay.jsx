@@ -3,6 +3,7 @@ import './screen-overlay.scss';
 import { useSearchContext } from '../../contexts/SearchContext';
 
 const ScreenOverlay = () => {
+  console.log("ScreenOverlay rendering");
   const { showSearchHistory, setShowSearchHistory } = useSearchContext();
 
   const handleOverlayClick = (e) => {

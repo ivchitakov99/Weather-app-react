@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import './home-desktop-child.scss'; 
 import searchIcon from "../../../img/fasearch.svg";
 import { useSearchContext } from '../../contexts/SearchContext';
 import { useWeatherFetch } from '../../contexts/WeatherFetchContext';
 
 
-const HomeDesktopChild = ({fetchWeatherData}) => {
+const HomeDesktopChild = () => {
   console.log("HomeDesktopChild rendering");
   const { showSearchHistory, setShowSearchHistory } = useSearchContext();
   const [city, setCity] = useState('Burgas');
@@ -22,34 +22,38 @@ const HomeDesktopChild = ({fetchWeatherData}) => {
     setSearchedCities(storedCities);
   }, []);
 
-  const handleInputChange = (event) => {
+  const handleInputChange = useCallback((event) => {
     setCity(event.target.value);
-  };
+  }, []); // Empty dependency array since it doesn't depend on any other values
+  
 
   useEffect(() => {
     // This will run only once on component mount and fetch the data
+    console.log("Fetch from HomeDesktopChild");
     fetchAndUpdateWeather(city);
-  }, [fetchAndUpdateWeather]); // Empty dependency array ensures this runs only once on mount
+  }, []); // Empty dependency array ensures this runs only once on mount
 
-  const handleFormSubmit = async (event) => {
+  const handleFormSubmit = useCallback(async (event) => {
     event.preventDefault(); // Prevent the default form submit action
     if (city) {
-      await fetchAndUpdateWeather(city); // Use the context function to fetch weather data
-      const storedCities = JSON.parse(sessionStorage.getItem('searchedCities')) || [];
-      if (!storedCities.includes(city)) {
-        const newStoredCities = [...storedCities, city];
-        sessionStorage.setItem('searchedCities', JSON.stringify(newStoredCities));
-        setSearchedCities(newStoredCities); // Update the state as well
+      const data = await fetchAndUpdateWeather(city); // Use the context function to fetch weather data
+      if (data){
+        const storedCities = JSON.parse(sessionStorage.getItem('searchedCities')) || [];
+        if (!storedCities.includes(city)) {
+          const newStoredCities = [...storedCities, city];
+          sessionStorage.setItem('searchedCities', JSON.stringify(newStoredCities));
+          setSearchedCities(newStoredCities); // Update the state as well
 
-        // Dispatch a custom event after updating the local storage
-        window.dispatchEvent(new Event('storageUpdated'));
+          // Dispatch a custom event after updating the local storage
+          window.dispatchEvent(new Event('storageUpdated'));
+        }
       }
-    }
-  };
+    } 
+  }, [city, fetchAndUpdateWeather]);
 
-  const handleSearchHistoryButtonClick = () => {
+  const handleSearchHistoryButtonClick = useCallback(() => {
     setShowSearchHistory(!showSearchHistory);
-  };
+  }, [showSearchHistory]);
     
   return (
     <div className="home-desktop-child" >

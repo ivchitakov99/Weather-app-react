@@ -1,4 +1,4 @@
-import React , {useState, useEffect, useMemo, useCallback} from 'react';
+import React , {useEffect, useMemo} from 'react';
 import './bg-blur.scss'; 
 import {WeatherDetails} from '../../Core/weather-details';
 import {WeatherDetailsInformation} from '../../Core/weather-details-information';
@@ -15,34 +15,13 @@ import Rain from "../../../img/raindrop.svg";
 import Cloudy from "../../../img/cloudy.svg";
 import Windy from "../../../img/windy.svg";
 import Clear from "../../../img/Clear.png"
-import fetchWeatherData from '../../services/weatherService';
-import { useWeatherDataAPI, useWeatherFetch } from '../../contexts/WeatherFetchContext';
+import { useWeatherDataAPI } from '../../contexts/WeatherFetchContext';
 
 
 const BgBlur = () => {
-
-    /*const [weatherDataAPI, setweatherDataAPI] = useState(null);*/
+    console.log("BgBlur rendering");
     const weatherDataAPI = useWeatherDataAPI();
-    const fetchAndUpdateWeather = useWeatherFetch();
     
-    /*
-     // Function to fetch weather data and update state
-    const handleFetchWeatherData = useCallback(async (city) => {
-      try {
-        const data = await fetchWeatherData(city);
-        setweatherDataAPI(data); // Update the weather data state
-        console.log('Fetched weather data:', data); // Log it to the console
-      } catch (error) {
-        console.error('Failed to fetch weather data:', error);
-      }
-    }, []);
-    */
-    /*
-    useEffect(() => {
-      // This will run only once on component mount and fetch the data
-      fetchAndUpdateWeather('Burgas');
-    }, [fetchAndUpdateWeather]); // Empty dependency array ensures this runs only once on mount
-    */
     const weatherImages = useMemo(() => ({
       Rain: Rain,
       Snow: Snow,

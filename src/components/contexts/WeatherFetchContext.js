@@ -8,12 +8,17 @@ export const WeatherFetchContext = createContext({
 });
 
 export const WeatherFetchProvider = ({ children }) => {
+  console.log("WeatherFetchProvider");
   const [weatherDataAPI, setWeatherDataAPI] = useState(null);
 
   const fetchAndUpdateWeather = useCallback(async (city) => {
     try {
       const data = await fetchWeatherData(city);
-      setWeatherDataAPI(data); // Update the weather data state
+      console.log("Data: ",data);
+      if (data) {
+        setWeatherDataAPI(data); // Update the weather data state
+        return data;
+      }
     } catch (error) {
       console.error('Failed to fetch weather data:', error);
     }

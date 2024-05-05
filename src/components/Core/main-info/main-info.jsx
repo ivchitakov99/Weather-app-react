@@ -2,6 +2,7 @@ import './main-info.scss';
 import { useWeatherData } from '../../contexts/WeatherContext';
 
 const MainInfo = () => {
+  console.log("MainInfo rendering");
   const weatherData = useWeatherData();
   return (
     <div className="main-info">
