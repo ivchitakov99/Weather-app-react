@@ -4,7 +4,6 @@ import { useSearchContext } from '../../contexts/SearchContext';
 import { useWeatherFetch } from '../../contexts/WeatherFetchContext';
 
 const SearchHistoryContainer = () => {
-    console.log("SearchHistoryContainer rendering");
     const [searchHistory, setSearchHistory] = useState([]);
     const { showSearchHistory, setShowSearchHistory } = useSearchContext();
     const fetchAndUpdateWeather = useWeatherFetch(); // Use the context hook

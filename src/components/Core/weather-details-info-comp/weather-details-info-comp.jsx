@@ -2,7 +2,6 @@ import React, {memo} from 'react';
 import './weather-details-info-comp.scss';
 
 const WeatherDetailsInfoComp = ({ tempMax, div11, imgSrc }) => {
-  console.log("WeatherDetailsInfoComp rendering");
   return (
     <div className="group-parent">
       <div className="temp-max-parent">

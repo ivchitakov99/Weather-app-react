@@ -10,7 +10,6 @@ const weatherAPI = axios.create({
 
 // Combined function to fetch geolocation and weather data
 const fetchWeatherData = async (city) => {
-  console.log("WeatherService fetchfunction");
   try {
     // Get the geolocation data
     const geoResponse = await weatherAPI.get('/geo/1.0/direct', {
@@ -23,9 +22,6 @@ const fetchWeatherData = async (city) => {
       params: { lat, lon }
     });
     const weatherData = weatherResponse.data;
-
-    // Here you would use weatherData and cityName
-    console.log(cityName, weatherData);
     return weatherData;
   } catch (error) {
     console.error('Error in fetchWeatherData:', error);

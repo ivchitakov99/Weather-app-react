@@ -10,7 +10,6 @@ import { SearchProvider } from '../../contexts/SearchContext';
 import { WeatherFetchProvider } from '../../contexts/WeatherFetchContext';
 
 const HomeDesktop = () => {
-  console.log("HomeDesktop rendering");
   return (
     <SearchProvider>
       <WeatherFetchProvider>

@@ -19,7 +19,6 @@ import { useWeatherDataAPI } from '../../contexts/WeatherFetchContext';
 
 
 const BgBlur = () => {
-    console.log("BgBlur rendering");
     const weatherDataAPI = useWeatherDataAPI();
     
     const weatherImages = useMemo(() => ({
