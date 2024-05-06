@@ -6,18 +6,25 @@ import {BgBlur} from '../bg-blur';
 import {WeatherProvider} from '../../contexts/WeatherContext';
 import {SearchHistoryContainer} from '../../Core/search-history-container';
 import {ScreenOverlay} from '../../Core/screen-overlay';
+import { SearchProvider } from '../../contexts/SearchContext';
+import { WeatherFetchProvider } from '../../contexts/WeatherFetchContext';
 
 const HomeDesktop = () => {
+  console.log("HomeDesktop rendering");
   return (
-    <div className="home-desktop">
-      <LogoIcon></LogoIcon>
-      <WeatherProvider>
-        <BgBlur />
-        <MainInfo />
-      </WeatherProvider>
-      <SearchHistoryContainer></SearchHistoryContainer>
-      <ScreenOverlay></ScreenOverlay>
-    </div>
+    <SearchProvider>
+      <WeatherFetchProvider>
+        <div className="home-desktop">
+          <LogoIcon></LogoIcon>
+          <WeatherProvider>  
+            <BgBlur />
+            <MainInfo />
+          </WeatherProvider>
+          <SearchHistoryContainer/>
+          <ScreenOverlay/>
+        </div>
+      </WeatherFetchProvider>
+    </SearchProvider>
   );
 }
 
