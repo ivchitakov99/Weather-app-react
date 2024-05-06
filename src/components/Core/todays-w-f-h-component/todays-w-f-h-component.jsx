@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {memo} from 'react';
 import './todays-w-f-h-component.scss';
 
 const TodaysWeatherForecastHourlyComponent = ({ div1, desc, div2, imgSrc }) => {
+  console.log("TodaysWeatherForecastHourlyComponent rendering");
   return (
     <div className="forecast-card0">
         <div className="left-side">
@@ -16,4 +17,4 @@ const TodaysWeatherForecastHourlyComponent = ({ div1, desc, div2, imgSrc }) => {
   );
 };
 
-export default TodaysWeatherForecastHourlyComponent;
+export default memo(TodaysWeatherForecastHourlyComponent);

@@ -1,4 +1,4 @@
-import React , {useEffect, useMemo} from 'react';
+import React , {useEffect, useMemo, memo} from 'react';
 import './bg-blur.scss'; 
 import {WeatherDetails} from '../../Core/weather-details';
 import {WeatherDetailsInformation} from '../../Core/weather-details-information';
@@ -114,7 +114,7 @@ const BgBlur = () => {
   );
 }
 
-export default BgBlur;
+export default memo(BgBlur);
 export const WeatherContext = React.createContext();
 export const ForecastContext = React.createContext();
 

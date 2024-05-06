@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {memo} from 'react';
 import './weather-details-info-comp.scss';
 
 const WeatherDetailsInfoComp = ({ tempMax, div11, imgSrc }) => {
+  console.log("WeatherDetailsInfoComp rendering");
   return (
     <div className="group-parent">
       <div className="temp-max-parent">
@@ -13,4 +14,4 @@ const WeatherDetailsInfoComp = ({ tempMax, div11, imgSrc }) => {
   );
 };
 
-export default WeatherDetailsInfoComp;
+export default memo(WeatherDetailsInfoComp);

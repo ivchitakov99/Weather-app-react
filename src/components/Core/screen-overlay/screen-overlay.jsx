@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import './screen-overlay.scss'; 
 import { useSearchContext } from '../../contexts/SearchContext';
 
@@ -20,4 +20,4 @@ const ScreenOverlay = () => {
   ): null;
 };
 
-export default ScreenOverlay;
+export default memo(ScreenOverlay);

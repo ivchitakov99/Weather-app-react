@@ -1,6 +1,6 @@
 import './main-info.scss';
 import { useWeatherData } from '../../contexts/WeatherContext';
-
+import { memo } from 'react';
 const MainInfo = () => {
   console.log("MainInfo rendering");
   const weatherData = useWeatherData();
@@ -22,4 +22,4 @@ const MainInfo = () => {
   );
 };
 
-export default MainInfo;
+export default memo(MainInfo);

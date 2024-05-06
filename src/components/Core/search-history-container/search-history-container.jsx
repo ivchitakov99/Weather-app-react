@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, memo } from 'react';
 import './search-history-container.scss'; 
 import { useSearchContext } from '../../contexts/SearchContext';
 import { useWeatherFetch } from '../../contexts/WeatherFetchContext';
@@ -56,4 +56,4 @@ const SearchHistoryContainer = () => {
     ) : null;
   };
   
-export default SearchHistoryContainer;
+export default memo(SearchHistoryContainer);
