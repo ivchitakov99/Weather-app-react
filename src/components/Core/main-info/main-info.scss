@@ -1,123 +1,235 @@
 .main-info {
-    position:absolute;
+    position:fixed;
     display: flex;
     align-items: center;
-    top: 68.983vh;
+    /*top: 68.983vh;*/
     top: 556px;
+    top:68.983vh;
     left: 8.333vw;
+    /*
+    width: 192px;
+    height: 168px;
+    */
+    width:  auto;
+    height: auto;
+    gap:5px;
 }
 
 .div {
+    /*
     width: 13.333vw;
     height: auto;
+    */
     font-family: Roboto;
-    font-size: 9.931vw;
+    /*font-size: 9.931vw;*/
+    font-size:143px;
     font-weight: 400;
     line-height: 167.58px;
     letter-spacing: -0.08em;
-    text-align: center;
+    text-align: left;
+    margin:0;
+    width:192px;
 }
 
 .city-parent {
-    width: 15.764vw;
-    height: auto;
-    margin: 10px;
+    width: 227px;
+    /*height:93px;*/
+    height:auto;
+    /*margin: 10px;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 5px;
+    /*margin-left: 15px;*/
 }
 
 .city {
+    /*
     width: 15.764vw;
     height: auto;
+    */
+    width:auto;
     font-family: Roboto;
-    font-size: 4.167vw;
+    /*font-size: 4.167vw;*/
+    font-size:60px;
     font-weight: 400;
     text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    vertical-align: top;
+    /*vertical-align: top;*/
+    line-height: 70.31px;
+    margin: 0;
+    min-height:72px;
   }
 
 .time-date {
+  /*
     width: 14.167vw;
     height: auto;
+    */
+    width:auto;
     font-family: Roboto;
     font-size: 18px;
     font-weight: 400;
     line-height: 21.09px;
     text-align: left;
-    margin-top: 5px;
+    margin:0;
   }
 
 .cloudy-icon {
   width: 4.861vw;
+  width:70px;
   height: auto;
-  overflow: hidden;
+  /*overflow: hidden;*/
   object-fit: contain;
+  margin-left:5px;
+}
+
+@media (max-width: 1030px) {
+  .main-info{
+    left: 8.403vw;
+  }
+
+  .city-parent {
+    width:120px;
+  }
+
+  .div {
+    font-size:90px;
+    width:130px;
+  }
+
+  .city {
+    font-size:30px;
+    line-height: 40px;
+    min-height:40px;
+  }
+
+  .time-date{
+    font-size: 14px;
+  }
+
+  .cloudy-icon{
+    width:60px;
+    margin-left:10px;
+  }
+
 }
 
 @media (max-width: 768px) {
 
   .main-info {
-    top: 25.453vh;
+    /*top: 25.453vh;*/
     left: 5.078vw;
     top:267px;
+    /*width:20.964vw;*/
+    width:auto;
+    height:auto;
+    position:absolute;
   }
 
   .div {
+    /*
     width:20.964vw;
     font-size: 15.625vw;
     line-height: 140.63px;
+    */
+    font-size: 120px;
+    line-height: 140.63px;
+    width:161px;
   }
 
   .city-parent{
-    width: 24.609vw;
+    /*width: 24.609vw;*/
+    width:189px;
     height: auto;
   }
   
   .city {
+    /*
     width: 24.609vw; 
     font-size: 6.25vw;
+    */
+    font-size:48px;
+    line-height: 56.25px;
   }
 
   .time-date {
-    width: 24.074vw;
+    /*width: 24.074vw;
     font-size:2.083vw;
+    line-height: 18.75px;
+    */
+    font-size:16px;
     line-height: 18.75px;
   }
 
   .cloudy-icon {
-    width: 7.161vw;
+    /*width: 7.161vw;*/
+    width:55px;
   }
+}
+
+@media (max-width: 470px) {
+  /*
+  .main-info{
+    left: 8.403vw;
+  }
+  */
+  
+
+  .div {
+    font-size:90px;
+    width:125px;
+  }
+
+  .city-parent {
+    width:120px;
+  }
+
+  .city {
+    font-size:30px;
+    line-height: 40px;
+    min-height:40px;
+  }
+
+  .time-date{
+    font-size: 14px;
+  }
+
+  .cloudy-icon{
+    width:55px;
+    margin-left:10px;
+  }
+
 }
 
 
 @media (max-width: 375px) {
 
   .main-info {
-    top: 19.086vh;
+    /*top: 19.086vh;*/
     left: 5.867vw;
     top:142px;
   }
  
   .div {
-    width:auto;
+    /*width:auto;*/
+    width:86px;
     font-size: 64px;
     line-height: 75px;
   }
 
   .city-parent{
-    width: auto;
+    /*width: auto;*/
+    width:139px;
     height: auto;
   }
   
   .city {
     width: auto; 
     font-size: 30px;
+    line-height: 35.16px;
   }
 
   .time-date {
@@ -128,5 +240,6 @@
 
   .cloudy-icon {
     width: 40px;
+    margin:0;
   }
 }

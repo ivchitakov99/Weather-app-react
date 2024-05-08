@@ -2,19 +2,26 @@
     position: absolute;
     top: 4.963vh;
     left: 8.403vw;
-    width: 6.243vw;
+    /*width: 6.243vw;*/
+    width:89.89px;
     height: auto;
     object-fit: contain;
   }
 
   @media (max-width: 768px) {
   .logo-icon {
-    width: 7.813vw;
+    /*width: 7.813vw;*/
+    width:60px;
     height: auto;
     top: 2.383vh;
     left: 5.078vw;
   }
 
+  @media (max-width: 420px) {
+    .logo-icon {
+      width:45px;
+    }
+  }
   @media (max-width: 375px) {
     .logo-icon {
       width: 39px;
