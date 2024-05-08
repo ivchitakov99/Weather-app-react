@@ -3,7 +3,7 @@ import './weather-details.scss';
 
 const WeatherDetails = () => {
   return (
-  <div className="weather-details">Weather Details...</div>
+  <h className="weather-details">Weather Details...</h>
 )};
 
 export default memo(WeatherDetails);

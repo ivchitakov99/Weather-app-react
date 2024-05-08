@@ -95,7 +95,7 @@
   }
 
   .input-wrapper {
-    width:65%;
+    width:55%;
     overflow:hidden;
   }
 
@@ -104,23 +104,24 @@
     height: 4.29vh;
     width: auto;
     height:auto;
+    height:45px;
     top: 1.239vh;
     left:auto;
     right:35px;
     position:fixed;
-    top: -435px;
+    top: -460px;
   }
 
   #weather-form {
     justify-content: space-between; /* Adjusts the spacing between the elements */
-    align-items: center; /* Aligns the items vertically in the center */
+    align-items: flex-end; /* Aligns the items vertically in the center */
     width:95%;
     height:100%;
     gap:5px;
   }
 
   .search-location {
-    width: 65%;
+    width: 55%;
     height: 21px;
     font-family: Roboto;
     font-size: 18px;

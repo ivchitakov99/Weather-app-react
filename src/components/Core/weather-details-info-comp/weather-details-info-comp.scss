@@ -18,16 +18,33 @@
 
 .vector-icon {
     height: 100%;
+    height:auto;
     width:auto;
   }
 
 .temp-max {
+    /*
     width:auto;
     height:auto;
+    */
+    width: auto;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.09px;
+    text-align: left;
+    margin:0;
+
 }
 
 .div11 {
     color: var(--color-white);
     width:auto;
     height:auto;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.09px;
+    text-align: left;
+    margin:0;
   }
