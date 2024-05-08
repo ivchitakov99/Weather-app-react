@@ -10,7 +10,6 @@
 .temp-max-parent {
     height:100%;
     display:flex;
-    /*position:static;*/
     justify-content: space-between;
     align-items: center;
     width:90%
@@ -23,10 +22,6 @@
   }
 
 .temp-max {
-    /*
-    width:auto;
-    height:auto;
-    */
     width: auto;
     font-family: Roboto;
     font-size: 18px;
@@ -34,7 +29,6 @@
     line-height: 21.09px;
     text-align: left;
     margin:0;
-
 }
 
 .div11 {

@@ -21,6 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap:10px;
     margin-bottom: 20px;
   }
   
@@ -45,6 +46,7 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
+    font-size:26px;
   }
   
   .search-history-container li {
@@ -58,3 +60,24 @@
     background-color: #f1f1f1;
     color:#000;
   }
+
+@media (max-width: 755px) {
+  .search-history-header h2{
+    font-size: 24px;
+    margin:0;
+  }
+
+  .search-history-container ul {
+    font-size:20px;
+  }
+}
+
+@media (max-width: 355px) {
+  .search-history-header h2{
+    font-size: 18px;
+  }
+
+  .search-history-container ul {
+    font-size:16px;
+  }
+}

@@ -67,26 +67,24 @@
     -webkit-text-fill-color: var(--color-gray-100); /* Adjust this to match your desired text color */
   }
 
-
-.fasearch-icon1 {
-  position:static;
-  top:1.117vh;
-  left:22.639vw;
-  width: 1.944vw ;
-  height: 3.474vh; 
-  overflow: hidden;
-}
-
-
-.search-history-icon {
+  .fasearch-icon1 {
     position:static;
-    fill: #ffffff;
     top:1.117vh;
-    left:18.486vw;
+    left:22.639vw;
     width: 1.944vw ;
     height: 3.474vh; 
     overflow: hidden;
   }
+
+  .search-history-icon {
+      position:static;
+      fill: #ffffff;
+      top:1.117vh;
+      left:18.486vw;
+      width: 1.944vw ;
+      height: 3.474vh; 
+      overflow: hidden;
+    }
 
   .button-wrapper {
     display:flex;
@@ -144,8 +142,6 @@
     height: 21px;
   }
 }
-
-
 
 @media (max-width: 375px) {
   .home-desktop-child {
