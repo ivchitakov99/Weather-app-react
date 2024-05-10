@@ -7,7 +7,7 @@ const WeatherDetailsInformation = () => {
   const weatherData = useContext(WeatherContext);  
   return (
     <div className="weather-details-information">
-        <h className="weather-details-information-title">MODERATE RAIN WITH DRIZZLE</h>
+        <h4 className="weather-details-information-title">MODERATE RAIN WITH DRIZZLE</h4>
         {weatherData.map((data, index) => (
             <WeatherDetailsInfoComp key={index} {...data} />
         ))}

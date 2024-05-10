@@ -29,5 +29,5 @@ export const useWeatherUpdater = () => {
 // Custom hook for MainInfo to access data
 export const useWeatherData = () => {
   const { weatherData } = useContext(WeatherContext);
-  return weatherData;
+  return React.useMemo(() => weatherData, [weatherData]);
 };
