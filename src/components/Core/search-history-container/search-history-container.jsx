@@ -2,12 +2,18 @@ import React, { useState, useEffect, useCallback, useMemo, memo } from 'react';
 import './search-history-container.scss'; 
 import { useSearchContext } from '../../contexts/SearchContext';
 import { useWeatherFetch } from '../../contexts/WeatherFetchContext';
+import { useCity } from '../../contexts/CityContext';
 
 const SearchHistoryContainer = () => {
     const [searchHistory, setSearchHistory] = useState([]);
+    const { setCity } = useCity();
     const { showSearchHistory, setShowSearchHistory } = useSearchContext();
     const fetchAndUpdateWeather = useWeatherFetch(); // Use the context hook
-   
+
+    const handleChangeCity = useCallback((cityName) => {
+      setCity(cityName); // This will update the city in HomeDesktopChild
+    }, [setCity]);
+
     const handleButtonClick = useCallback(() => {
       setShowSearchHistory(false);
     }, [setShowSearchHistory]); // Dependency array includes setShowSearchHistory
@@ -32,7 +38,8 @@ const SearchHistoryContainer = () => {
     const handleCityClick = useCallback(async (city) => {
       await fetchAndUpdateWeather(city);
       setShowSearchHistory(false);
-    }, [fetchAndUpdateWeather, setShowSearchHistory]); // Dependencies are fetchAndUpdateWeather and setShowSearchHistory
+      handleChangeCity(city);
+    }, [fetchAndUpdateWeather, setShowSearchHistory, handleChangeCity]); // Dependencies are fetchAndUpdateWeather and setShowSearchHistory
 
     const searchHistoryListItems = useMemo(() => {
       return searchHistory.map((city, index) => (

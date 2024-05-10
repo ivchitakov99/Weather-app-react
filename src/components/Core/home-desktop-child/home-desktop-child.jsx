@@ -3,10 +3,12 @@ import './home-desktop-child.scss';
 import searchIcon from "../../../img/fasearch.svg";
 import { useSearchContext } from '../../contexts/SearchContext';
 import { useWeatherFetch } from '../../contexts/WeatherFetchContext';
+import { useCity } from '../../contexts/CityContext';
 
 const HomeDesktopChild = () => {
   const { showSearchHistory, setShowSearchHistory } = useSearchContext();
-  const [city, setCity] = useState('Burgas');
+  const { city, setCity } = useCity();
+  /*const [city, setCity] = useState('Burgas');*/
   const [searchedCities, setSearchedCities] = useState([]);
   const fetchAndUpdateWeather = useWeatherFetch(); // Use the context hook
 

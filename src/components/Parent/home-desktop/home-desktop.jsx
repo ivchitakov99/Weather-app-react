@@ -8,11 +8,13 @@ import {SearchHistoryContainer} from '../../Core/search-history-container';
 import {ScreenOverlay} from '../../Core/screen-overlay';
 import { SearchProvider } from '../../contexts/SearchContext';
 import { WeatherFetchProvider } from '../../contexts/WeatherFetchContext';
+import { CityProvider } from '../../contexts/CityContext';
 
 const HomeDesktop = () => {
   return (
     <SearchProvider>
       <WeatherFetchProvider>
+        <CityProvider>
         <div className="home-desktop">
           <LogoIcon></LogoIcon>
           <WeatherProvider>  
@@ -22,6 +24,7 @@ const HomeDesktop = () => {
           <SearchHistoryContainer/>
           <ScreenOverlay/>
         </div>
+        </CityProvider>
       </WeatherFetchProvider>
     </SearchProvider>
   );
