@@ -97,6 +97,33 @@
     overflow:hidden;
   }
 
+  @media (min-width: 1600px) {
+    .home-desktop-child {
+      width:25.764vw;
+    }
+
+    .search-location {
+      height: auto;
+      font-size: 28px;
+    }
+  
+    .fasearch-icon1{
+      width: 42px;
+      height: auto;
+      top:21px;
+      right:0;
+    }
+  
+    .search-history-icon {
+      width: 42px;
+      height: auto;
+    }
+
+    #weather-form {
+      height: 70px;
+    }
+  }
+
   @media (max-width: 768px) {
   .home-desktop-child {
     height: 4.29vh;

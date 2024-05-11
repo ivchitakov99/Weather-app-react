@@ -61,6 +61,26 @@
     color:#000;
   }
 
+@media (min-width: 1600px) {
+  .search-history-header{
+    padding:10px;
+  }
+
+  .search-history-header h2{
+    font-size: 46px;
+    margin:0;
+    height:auto;
+  }
+
+  .search-history-container ul {
+    font-size:32px;
+  }
+
+  .close-btn {
+    font-size: 42px;
+  }
+}
+
 @media (max-width: 755px) {
   .search-history-header h2{
     font-size: 24px;

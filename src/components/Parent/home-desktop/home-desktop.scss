@@ -10,4 +10,10 @@
     color: var(--color-white);
     font-family: var(--font-roboto);
   }
+
+  @media (min-width: 1600px) { 
+    .home-desktop{
+      font-size: 26px;
+    }
+  }
   

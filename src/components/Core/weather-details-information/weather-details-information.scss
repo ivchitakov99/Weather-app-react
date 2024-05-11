@@ -20,6 +20,19 @@
     display: inline-block;
   }
 
+  @media (min-width: 1600px){
+    .weather-details-information{
+        height:auto;
+        gap:35px;
+    }
+
+    .weather-details-information-title {
+      margin:20px 0;
+      
+    }
+
+  }
+
   @media (max-width: 768px){
     .weather-details-information{
         left:auto;

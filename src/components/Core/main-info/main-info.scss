@@ -61,6 +61,35 @@
   margin-left:5px;
 }
 
+@media (min-width: 1600px) {
+  .main-info {
+    gap:15px;
+  }
+
+  .div {
+    font-size:163px;
+    line-height: 167.58px;
+    width:212px;
+  }
+
+  .city {
+    font-size:70px;
+    line-height: 75.31px;
+    min-height:78px;
+  }
+
+  .time-date {
+    font-size: 24px;
+    line-height: 26.09px;
+  }
+
+  .cloudy-icon {
+    width:80px;
+    height:80px;
+    margin-left:5px;
+  }
+}
+
 @media (max-width: 1030px) {
   .main-info{
     left: 8.403vw;

@@ -13,6 +13,12 @@
     padding-right: 100px;
   }
 
+  @media (min-width: 1600px) {
+    .todays-weather-forecast-hourly{
+        gap:30px;
+      }   
+}
+
 
 @media (max-width: 768px) {
     .todays-weather-forecast-hourly{

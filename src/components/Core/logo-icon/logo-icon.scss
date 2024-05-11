@@ -7,6 +7,12 @@
     object-fit: contain;
   }
 
+  @media (min-width: 1600px) {
+    .logo-icon {
+      width: 115px;
+    }
+  }
+
   @media (max-width: 768px) {
   .logo-icon {
     width:60px;

@@ -42,3 +42,22 @@
     text-align: left;
     margin:0;
   }
+
+  @media (min-width: 1600px){
+    .temp-max {
+      font-size: 25px;  
+      height:auto;
+    }
+  
+    .div11 {
+      height:auto;
+      font-size: 25px;
+    }
+
+    .vector-icon {
+      width:40px;
+      height:40px;
+    }
+  }
+
+  

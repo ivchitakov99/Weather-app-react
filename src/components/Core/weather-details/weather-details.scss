@@ -3,6 +3,13 @@
     top: 16.377vh;
     left:2.778vw;
   }
+
+  @media (min-width: 1600px) { 
+    .weather-details{
+      margin:25px 0;
+    }
+  }
+
   @media (max-width: 768px) { 
   .weather-details{
     position:static;
