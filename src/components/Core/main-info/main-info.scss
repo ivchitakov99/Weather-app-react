@@ -7,6 +7,7 @@
     width:  auto;
     height: auto;
     gap:5px;
+    max-height: 210px;
 }
 
 .div {
@@ -22,25 +23,33 @@
 
 .city-parent {
     width: 227px;
+    width:auto;
     height:auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    gap:5px;
 }
 
 .city {
     width:99%;
+    width:auto;
     font-family: Roboto;
     font-size:60px;
     font-weight: 400;
     text-align: left;
+    /*
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    */
     line-height: 70.31px;
+    height:auto;
     margin: 0;
     min-height:72px;
+    word-wrap: break-word;
+    max-width: 430px;
   }
 
 .time-date {
@@ -74,6 +83,7 @@
 
   .city-parent {
     width:auto;
+    max-width: 500px;
   }
 
   .city {
@@ -81,6 +91,9 @@
     line-height: 75.31px;
     min-height:78px;
     width:auto;
+    width:100%;
+    max-width: 500px;
+    
   }
 
   .time-date {
@@ -95,13 +108,16 @@
   }
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 1330px) {
   .main-info{
     left: 8.403vw;
+    max-height: 210px;
   }
 
   .city-parent {
     width:120px;
+    width:auto;
+    max-width: 130px;
   }
 
   .div {
@@ -113,6 +129,7 @@
     font-size:30px;
     line-height: 40px;
     min-height:40px;
+    width:100%;
   }
 
   .time-date{
@@ -130,10 +147,12 @@
 @media (max-width: 768px) {
   .main-info {
     left: 5.078vw;
-    top:267px;
+    top:247px;
     width:auto;
     height:auto;
     position:absolute;
+    max-height: 155px;
+    min-width: none;
   }
 
   .div {
@@ -144,12 +163,16 @@
 
   .city-parent{
     width:189px;
+    width:auto;
     height: auto;
+    min-width: auto;
+    max-width: 350px;
   }
   
   .city {
     font-size:48px;
     line-height: 56.25px;
+    min-width:auto;
   }
 
   .time-date {
@@ -163,7 +186,7 @@
   }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 660px) {
   .div {
     font-size:90px;
     width:125px;
@@ -171,6 +194,8 @@
 
   .city-parent {
     width:120px;
+    max-width: 150px;
+    width:auto;
   }
 
   .city {
@@ -190,10 +215,11 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 380px) {
   .main-info {
     left: 5.867vw;
     top:142px;
+    max-height:35px;
   }
  
   .div {
@@ -208,13 +234,14 @@
   }
   
   .city {
-    width: auto; 
+    /*width: auto; */
     font-size: 30px;
     line-height: 35.16px;
+    word-wrap: break-word;
   }
 
   .time-date {
-    width: auto;
+    /*width: auto;*/
     font-size:10px;
     line-height: 11.72px;
   }

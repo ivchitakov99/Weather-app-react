@@ -9,6 +9,7 @@ import {ScreenOverlay} from '../../Core/screen-overlay';
 import { SearchProvider } from '../../contexts/SearchContext';
 import { WeatherFetchProvider } from '../../contexts/WeatherFetchContext';
 import { CityProvider } from '../../contexts/CityContext';
+import { HomeDesktopChild } from '../../Core/home-desktop-child';
 
 const HomeDesktop = () => {
   return (
@@ -16,6 +17,7 @@ const HomeDesktop = () => {
       <WeatherFetchProvider>
         <CityProvider>
         <div className="home-desktop">
+          <HomeDesktopChild/>
           <LogoIcon></LogoIcon>
           <WeatherProvider>  
             <BgBlur />

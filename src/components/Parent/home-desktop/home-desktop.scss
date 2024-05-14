@@ -3,8 +3,8 @@
     position: relative;
     display:flex;
     height:auto;
-    min-height: 100vh; /* Ensure the container is at least the height of the viewport */
-    overflow-y: auto; /* Add vertical scrolling when content exceeds viewport height */
+    /*min-height: 100vh; /* Ensure the container is at least the height of the viewport */
+    /*overflow-y: auto; /* Add vertical scrolling when content exceeds viewport height */
     text-align: left;
     font-size: var(--font-size-lg);
     color: var(--color-white);

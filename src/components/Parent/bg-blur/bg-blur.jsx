@@ -99,7 +99,7 @@ const BgBlur = () => {
 
     return (
     <div className="bg-blur">
-      <HomeDesktopChild></HomeDesktopChild>  
+      {/*<HomeDesktopChild></HomeDesktopChild>*/}
       <WeatherDetails />
       <WeatherContext.Provider value={weatherData}>
         <WeatherDetailsInformation />

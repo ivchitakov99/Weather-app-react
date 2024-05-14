@@ -36,9 +36,11 @@ const HomeDesktopChild = () => {
     if (city) {
       const data = await fetchAndUpdateWeather(city); // Use the context function to fetch weather data
       if (data){
+        const cityToAdd = data.city.name;
+        console.log(cityToAdd);
         const storedCities = JSON.parse(sessionStorage.getItem('searchedCities')) || [];
-        if (!storedCities.includes(city)) {
-          const newStoredCities = [...storedCities, city];
+        if (!storedCities.includes(cityToAdd)) {
+          const newStoredCities = [...storedCities, cityToAdd];
           sessionStorage.setItem('searchedCities', JSON.stringify(newStoredCities));
           setSearchedCities(newStoredCities); // Update the state as well
 

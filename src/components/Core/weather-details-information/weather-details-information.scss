@@ -44,6 +44,7 @@
         align-items: center;
         justify-content: flex-start;
         font-size:18px;
+        height:auto;
       }
     
       .weather-details-information > div {
@@ -75,7 +76,7 @@
       }
   }
 
-  @media (max-width: 375px){
+  @media (max-width: 380px){
     .weather-details-information{
         left:auto;
         top:auto;
@@ -87,5 +88,6 @@
         justify-content: flex-start;
         font-size:14px;
         line-height:16.41px;
+        height:auto;
       }
   }
