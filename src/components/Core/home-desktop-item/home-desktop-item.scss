@@ -2,7 +2,7 @@
     position:static;
     box-sizing: border-box;
     top: 65.881vh;
-    left:2.431vw;
+    /*left:2.431vw;*/
     width: 25.764vw;
     height: 50px;
     border-bottom: 1px solid var(--color-white);
@@ -17,7 +17,7 @@
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 375px) {
     .home-desktop-item{
         width: 285px;
         /*width:76vw;*/

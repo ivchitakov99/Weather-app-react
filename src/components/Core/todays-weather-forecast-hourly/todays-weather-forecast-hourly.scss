@@ -10,7 +10,7 @@
     gap: 20px;
     width: 24.583vw;
     height:auto;
-    padding-right: 100px;
+    /*padding-right: 100px;*/
   }
 
   @media (min-width: 1600px) {
@@ -34,7 +34,7 @@
       }   
 }
 
-@media (max-width: 380px) {
+@media (max-width: 375px) {
   .todays-weather-forecast-hourly{
       left:auto;
       top:auto;

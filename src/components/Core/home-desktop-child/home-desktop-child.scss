@@ -2,24 +2,30 @@
   position: absolute;
   /*position:fixed;*/
   box-sizing: border-box;
-  top: 5.087vh;
+  /*top: 5.087vh;*/
   display:flex;
   align-items: center;
   justify-content: flex-start;
   height:auto;
   left:auto;
   width: 25.764vw;
-  right:110px;
-  z-index: 900;
+  /*width: 24.583vw;*/
+  /*width:auto;*/
+  /*right:110px;*/
+   /*z-index: 900;*/
+   position:static;
+   position:relative;
+   /*padding-right:10px;*/
+   min-width: 220px;
 }
 
 .home-desktop-child::before {
   content: '';
   position: absolute;
-  top: -60px; /* Extend beyond the top of the parent */
+  top: -40px; /* Extend beyond the top of the parent */
   right: -30px; /* Extend beyond the right of the parent */
   bottom: -10px; /* Extend beyond the bottom of the parent */
-  left: -15px; /* Extend beyond the left of the parent */
+  left: -30px; /* Extend beyond the left of the parent*/
   backdrop-filter: blur(7px);
   z-index: -1; /* Place it behind the content */
   border-radius: 20px;
@@ -115,7 +121,9 @@
   @media (min-width: 1600px) {
     .home-desktop-child {
       width:25.764vw;
-      right:100px;
+      /*width: 24.583vw;*/
+      /*width:auto;*/
+      /*right:100px;*/
     }
 
     .search-location {
@@ -140,24 +148,22 @@
     }
   }
 
-  @media (max-width: 1030px) {
-    .home-desktop-child {
-      right:115px;
-    }
-  }
-
   @media (max-width: 768px) {
   .home-desktop-child {
     height: 4.29vh;
     width: auto;
+    width:39.714vw;
     height:auto;
     height:45px;
-    top: 1.239vh;
+    /*top: 1.239vh;*/
     left:auto;
-    right:35px;
-    position:fixed;
+    /*right:35px;*/
+    /*position:fixed;*/
+    /*position:static;*/
     /*position:absolute;*/
     /*top: -460px;*/
+    top:-12px;
+
   }
 
   #weather-form {
@@ -196,17 +202,23 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 375px) {
   .home-desktop-child {
-    height: 4.29vh;
-    width: auto;
+    /*height: 4.29vh;*/
+    /*width: auto;*/
+    width:33.333vw;
     height:auto;
-    top: 1.239vh;
+    /*top: 2.649vw;*/
     left:auto;
-    right:35px;
-    position:fixed;
+    /*right:21px;*/
+    right:0;
+    /*position:fixed;*/
+    /*position:static;*/
     /*top: -230px;*/
-    width:140px;
+    /*width:140px;*/
+    min-width: 115px;
+    height:20px;
+    top:0;
   }
 
   #weather-form {

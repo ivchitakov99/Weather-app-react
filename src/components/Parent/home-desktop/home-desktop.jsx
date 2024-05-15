@@ -17,8 +17,10 @@ const HomeDesktop = () => {
       <WeatherFetchProvider>
         <CityProvider>
         <div className="home-desktop">
-          <HomeDesktopChild/>
-          <LogoIcon></LogoIcon>
+          <div className="logo-search">
+            <LogoIcon/>
+            <HomeDesktopChild/>
+          </div>
           <WeatherProvider>  
             <BgBlur />
             <MainInfo />
