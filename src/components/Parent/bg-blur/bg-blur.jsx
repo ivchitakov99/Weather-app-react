@@ -19,7 +19,6 @@ import { useWeatherDataAPI } from '../../contexts/WeatherFetchContext';
 
 
 const BgBlur = () => {
-    console.log("BgBlur rendering");
     const weatherDataAPI = useWeatherDataAPI();
     
     const weatherImages = useMemo(() => ({
@@ -100,7 +99,7 @@ const BgBlur = () => {
 
     return (
     <div className="bg-blur">
-      <HomeDesktopChild></HomeDesktopChild>  
+      {/*<HomeDesktopChild></HomeDesktopChild>*/}
       <WeatherDetails />
       <WeatherContext.Provider value={weatherData}>
         <WeatherDetailsInformation />

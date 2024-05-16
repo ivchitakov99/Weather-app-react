@@ -3,17 +3,16 @@ import './home-desktop-child.scss';
 import searchIcon from "../../../img/fasearch.svg";
 import { useSearchContext } from '../../contexts/SearchContext';
 import { useWeatherFetch } from '../../contexts/WeatherFetchContext';
-
+import { useCity } from '../../contexts/CityContext';
 
 const HomeDesktopChild = () => {
-  console.log("HomeDesktopChild rendering");
   const { showSearchHistory, setShowSearchHistory } = useSearchContext();
-  const [city, setCity] = useState('Burgas');
+  const { city, setCity } = useCity();
+  /*const [city, setCity] = useState('Burgas');*/
   const [searchedCities, setSearchedCities] = useState([]);
   const fetchAndUpdateWeather = useWeatherFetch(); // Use the context hook
 
   useEffect(() => {
-    console.log("useEffect hook in HDC 1");
     // Load the search history from sessionStorage on component mount
     const storedCities = JSON.parse(sessionStorage.getItem('searchedCities')) || [];
     if (!storedCities.includes(city)) {
@@ -24,26 +23,24 @@ const HomeDesktopChild = () => {
   }, []);
 
   const handleInputChange = useCallback((event) => {
-    console.log("handleInputChange in HDC");
     setCity(event.target.value);
   }, []); // Empty dependency array since it doesn't depend on any other values
   
-
   useEffect(() => {
     // This will run only once on component mount and fetch the data
-    console.log("useEffect hook in HDC 2 (fetchAndUpdateWeather)");
     fetchAndUpdateWeather(city);
   }, []); // Empty dependency array ensures this runs only once on mount
 
   const handleFormSubmit = useCallback(async (event) => {
-    console.log("handleFormSubmit in HDC");
     event.preventDefault(); // Prevent the default form submit action
     if (city) {
       const data = await fetchAndUpdateWeather(city); // Use the context function to fetch weather data
       if (data){
+        const cityToAdd = data.city.name;
+        console.log(cityToAdd);
         const storedCities = JSON.parse(sessionStorage.getItem('searchedCities')) || [];
-        if (!storedCities.includes(city)) {
-          const newStoredCities = [...storedCities, city];
+        if (!storedCities.includes(cityToAdd)) {
+          const newStoredCities = [...storedCities, cityToAdd];
           sessionStorage.setItem('searchedCities', JSON.stringify(newStoredCities));
           setSearchedCities(newStoredCities); // Update the state as well
 
@@ -55,7 +52,6 @@ const HomeDesktopChild = () => {
   }, [city, fetchAndUpdateWeather]);
 
   const handleSearchHistoryButtonClick = useCallback(() => {
-    console.log("handleSearchHistoryButtonClick in HDC");
     setShowSearchHistory(!showSearchHistory);
   }, [showSearchHistory]);
     

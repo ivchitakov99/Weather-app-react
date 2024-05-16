@@ -1,13 +1,34 @@
 .home-desktop-child {
   position: absolute;
+  /*position:fixed;*/
   box-sizing: border-box;
-  top: 5.087vh;
+  /*top: 5.087vh;*/
   display:flex;
   align-items: center;
   justify-content: flex-start;
   height:auto;
   left:auto;
-  width:25.764vw;
+  width: 25.764vw;
+  /*width: 24.583vw;*/
+  /*width:auto;*/
+  /*right:110px;*/
+   /*z-index: 900;*/
+   /*position:static;*/
+   position:relative;
+   /*padding-right:10px;*/
+   min-width: 220px;
+}
+
+.home-desktop-child::before {
+  content: '';
+  position: absolute;
+  top: -40px; /* Extend beyond the top of the parent */
+  right: -100px; /* Extend beyond the right of the parent */
+  bottom: -0.8px; /* Extend beyond the bottom of the parent */
+  left: -40px; /* Extend beyond the left of the parent*/
+  backdrop-filter: blur(10px);
+  z-index: -1; /* Place it behind the content */
+  /*border-radius: 20px;*/
 }
 
 #weather-form {
@@ -40,7 +61,7 @@
     position: static;
     left:0;
     top:1.117vh;
-    width:65%;
+    width:100%;
     min-width: 166px;
     font-size: 20px;
     color: var(--color-gray-100);
@@ -67,26 +88,24 @@
     -webkit-text-fill-color: var(--color-gray-100); /* Adjust this to match your desired text color */
   }
 
-
-.fasearch-icon1 {
-  position:static;
-  top:1.117vh;
-  left:22.639vw;
-  width: 1.944vw ;
-  height: 3.474vh; 
-  overflow: hidden;
-}
-
-
-.search-history-icon {
+  .fasearch-icon1 {
     position:static;
-    fill: #ffffff;
     top:1.117vh;
-    left:18.486vw;
+    left:22.639vw;
     width: 1.944vw ;
     height: 3.474vh; 
     overflow: hidden;
   }
+
+  .search-history-icon {
+      position:static;
+      fill: #ffffff;
+      top:1.117vh;
+      left:18.486vw;
+      width: 1.944vw ;
+      height: 3.474vh; 
+      overflow: hidden;
+    }
 
   .button-wrapper {
     display:flex;
@@ -95,32 +114,74 @@
   }
 
   .input-wrapper {
-    width:65%;
+    width:75%;
     overflow:hidden;
+  }
+
+  @media (min-width: 1600px) {
+    .home-desktop-child {
+      width:25.764vw;
+      /*width: 24.583vw;*/
+      /*width:auto;*/
+      /*right:100px;*/
+    }
+
+    .search-location {
+      height: auto;
+      font-size: 28px;
+    }
+  
+    .fasearch-icon1{
+      width: 42px;
+      height: auto;
+      top:21px;
+      right:0;
+    }
+  
+    .search-history-icon {
+      width: 42px;
+      height: auto;
+    }
+
+    #weather-form {
+      height: 70px;
+    }
   }
 
   @media (max-width: 768px) {
   .home-desktop-child {
     height: 4.29vh;
     width: auto;
+    width:39.714vw;
     height:auto;
-    top: 1.239vh;
+    height:45px;
+    /*top: 1.239vh;*/
     left:auto;
-    right:35px;
-    position:fixed;
-    top: -435px;
+    /*right:35px;*/
+    /*position:fixed;*/
+    /*position:static;*/
+    /*position:absolute;*/
+    /*top: -460px;*/
+    top:-12px;
+
+    .home-desktop-child::before{
+      display:none
+    }
+
   }
 
   #weather-form {
     justify-content: space-between; /* Adjusts the spacing between the elements */
-    align-items: center; /* Aligns the items vertically in the center */
+    align-items: flex-end; /* Aligns the items vertically in the center */
     width:95%;
     height:100%;
     gap:5px;
+    padding-bottom: 3px;
+    
   }
 
   .search-location {
-    width: 65%;
+    /*width: 100%;*/
     height: 21px;
     font-family: Roboto;
     font-size: 18px;
@@ -129,6 +190,7 @@
     text-align: left;
     top:18px;
     left:0;
+    
   }
 
   .fasearch-icon1{
@@ -144,19 +206,23 @@
   }
 }
 
-
-
 @media (max-width: 375px) {
   .home-desktop-child {
-    height: 4.29vh;
-    width: auto;
+    /*height: 4.29vh;*/
+    /*width: auto;*/
+    width:33.333vw;
     height:auto;
-    top: 1.239vh;
+    /*top: 2.649vw;*/
     left:auto;
-    right:35px;
-    position:fixed;
-    top: -230px;
-    width:140px;
+    /*right:21px;*/
+    right:0;
+    /*position:fixed;*/
+    /*position:static;*/
+    /*top: -230px;*/
+    /*width:140px;*/
+    min-width: 115px;
+    height:20px;
+    top:0;
   }
 
   #weather-form {
@@ -165,10 +231,11 @@
     align-items: center; /* Aligns the items vertically in the center */
     width:100%;
     height:100%;
+    padding:0;
   }
 
   .search-location {
-    width:100%;
+    /*width:100%;*/
     height: 14px;
     font-family: Roboto;
     font-size: 12px;

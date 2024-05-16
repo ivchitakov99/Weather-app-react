@@ -1,7 +1,6 @@
 .weather-details-information {
     position:static;
-    top: 25.434vh;
-    left:2.778vw;
+    /*left:2.778vw;*/
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -13,12 +12,25 @@
   }
 
   .weather-details-information-title {
-    width: 24.583vw;
+    width:auto;
     position: static;
     text-transform: uppercase;
     font-weight: 500;
     color: var(--color-white);
     display: inline-block;
+  }
+
+  @media (min-width: 1600px){
+    .weather-details-information{
+        height:auto;
+        gap:35px;
+    }
+
+    .weather-details-information-title {
+      margin:20px 0;
+      
+    }
+
   }
 
   @media (max-width: 768px){
@@ -32,6 +44,7 @@
         align-items: center;
         justify-content: flex-start;
         font-size:18px;
+        height:auto;
       }
     
       .weather-details-information > div {
@@ -75,5 +88,6 @@
         justify-content: flex-start;
         font-size:14px;
         line-height:16.41px;
+        height:auto;
       }
   }

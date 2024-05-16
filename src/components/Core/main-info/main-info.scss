@@ -1,132 +1,254 @@
 .main-info {
-    position:absolute;
+    position:fixed;
     display: flex;
     align-items: center;
-    top: 68.983vh;
-    top: 556px;
+    top:68.983vh;
     left: 8.333vw;
+    width:  auto;
+    height: auto;
+    gap:5px;
+    max-height: 210px;
 }
 
 .div {
-    width: 13.333vw;
-    height: auto;
     font-family: Roboto;
-    font-size: 9.931vw;
+    font-size:143px;
     font-weight: 400;
     line-height: 167.58px;
     letter-spacing: -0.08em;
-    text-align: center;
+    text-align: left;
+    margin:0;
+    width:192px;
 }
 
 .city-parent {
-    width: 15.764vw;
-    height: auto;
-    margin: 10px;
+    width: 227px;
+    width:auto;
+    height:auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 5px;
+    gap:5px;
 }
 
 .city {
-    width: 15.764vw;
-    height: auto;
+    width:99%;
+    width:auto;
     font-family: Roboto;
-    font-size: 4.167vw;
+    font-size:60px;
     font-weight: 400;
     text-align: left;
+    /*
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    vertical-align: top;
+    */
+    line-height: 70.31px;
+    height:auto;
+    margin: 0;
+    min-height:72px;
+    word-wrap: break-word;
+    max-width: 430px;
   }
 
 .time-date {
-    width: 14.167vw;
-    height: auto;
+    width:auto;
     font-family: Roboto;
     font-size: 18px;
     font-weight: 400;
     line-height: 21.09px;
     text-align: left;
-    margin-top: 5px;
+    margin:0;
   }
 
 .cloudy-icon {
   width: 4.861vw;
-  height: auto;
-  overflow: hidden;
+  width:70px;
+  height:70px;
   object-fit: contain;
+  margin-left:5px;
 }
 
-@media (max-width: 768px) {
-
+@media (min-width: 1600px) {
   .main-info {
-    top: 25.453vh;
-    left: 5.078vw;
-    top:267px;
+    gap:15px;
   }
 
   .div {
-    width:20.964vw;
-    font-size: 15.625vw;
-    line-height: 140.63px;
+    font-size:163px;
+    line-height: 167.58px;
+    width:212px;
   }
 
-  .city-parent{
-    width: 24.609vw;
-    height: auto;
+  .city-parent {
+    width:auto;
+    max-width: 500px;
   }
-  
+
   .city {
-    width: 24.609vw; 
-    font-size: 6.25vw;
+    font-size:70px;
+    line-height: 75.31px;
+    min-height:78px;
+    width:auto;
+    width:100%;
+    max-width: 500px;
+    
   }
 
   .time-date {
-    width: 24.074vw;
-    font-size:2.083vw;
+    font-size: 24px;
+    line-height: 26.09px;
+  }
+
+  .cloudy-icon {
+    width:80px;
+    height:80px;
+    margin-left:5px;
+  }
+}
+
+@media (max-width: 1330px) {
+  .main-info{
+    left: 8.403vw;
+    max-height: 210px;
+  }
+
+  .city-parent {
+    width:120px;
+    width:auto;
+    max-width: 130px;
+  }
+
+  .div {
+    font-size:90px;
+    width:130px;
+  }
+
+  .city {
+    font-size:30px;
+    line-height: 40px;
+    min-height:40px;
+    width:100%;
+  }
+
+  .time-date{
+    font-size: 14px;
+  }
+
+  .cloudy-icon{
+    width:60px;
+    height:60px;
+    margin-left:10px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .main-info {
+    left: 5.078vw;
+    top:247px;
+    width:auto;
+    height:auto;
+    position:absolute;
+    max-height: 155px;
+    min-width: none;
+  }
+
+  .div {
+    font-size: 120px;
+    line-height: 140.63px;
+    width:161px;
+  }
+
+  .city-parent{
+    width:189px;
+    width:auto;
+    height: auto;
+    min-width: auto;
+    max-width: 350px;
+  }
+  
+  .city {
+    font-size:48px;
+    line-height: 56.25px;
+    min-width:auto;
+  }
+
+  .time-date {
+    font-size:16px;
     line-height: 18.75px;
   }
 
   .cloudy-icon {
-    width: 7.161vw;
+    width:55px;
+    height:55px;
   }
 }
 
+@media (max-width: 660px) {
+  .div {
+    font-size:90px;
+    width:125px;
+  }
+
+  .city-parent {
+    width:120px;
+    max-width: 150px;
+    width:auto;
+  }
+
+  .city {
+    font-size:30px;
+    line-height: 40px;
+    min-height:40px;
+  }
+
+  .time-date{
+    font-size: 14px;
+  }
+  
+  .cloudy-icon{
+    width:55px;
+    height:55px;
+    margin-left:10px;
+  }
+}
 
 @media (max-width: 375px) {
-
   .main-info {
-    top: 19.086vh;
     left: 5.867vw;
     top:142px;
+    max-height:35px;
   }
  
   .div {
-    width:auto;
+    width:86px;
     font-size: 64px;
     line-height: 75px;
   }
 
   .city-parent{
-    width: auto;
+    width:139px;
     height: auto;
   }
   
   .city {
-    width: auto; 
+    /*width: auto; */
     font-size: 30px;
+    line-height: 35.16px;
+    word-wrap: break-word;
   }
 
   .time-date {
-    width: auto;
+    /*width: auto;*/
     font-size:10px;
     line-height: 11.72px;
   }
 
   .cloudy-icon {
     width: 40px;
+    height: 40px;
+    margin:0;
   }
 }

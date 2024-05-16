@@ -8,14 +8,19 @@ import {SearchHistoryContainer} from '../../Core/search-history-container';
 import {ScreenOverlay} from '../../Core/screen-overlay';
 import { SearchProvider } from '../../contexts/SearchContext';
 import { WeatherFetchProvider } from '../../contexts/WeatherFetchContext';
+import { CityProvider } from '../../contexts/CityContext';
+import { HomeDesktopChild } from '../../Core/home-desktop-child';
 
 const HomeDesktop = () => {
-  console.log("HomeDesktop rendering");
   return (
     <SearchProvider>
       <WeatherFetchProvider>
+        <CityProvider>
         <div className="home-desktop">
-          <LogoIcon></LogoIcon>
+          <div className="logo-search">
+            <LogoIcon/>
+            <HomeDesktopChild/>
+          </div>
           <WeatherProvider>  
             <BgBlur />
             <MainInfo />
@@ -23,6 +28,7 @@ const HomeDesktop = () => {
           <SearchHistoryContainer/>
           <ScreenOverlay/>
         </div>
+        </CityProvider>
       </WeatherFetchProvider>
     </SearchProvider>
   );

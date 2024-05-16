@@ -1,20 +1,14 @@
-// WeatherFetchContext.js
-import React, { createContext, useContext, useState, useCallback } from 'react';
+import React, { createContext, useContext, useState, useCallback, useMemo } from 'react';
 import fetchWeatherData from '../services/weatherService'; // Adjust the import path as needed
 
-export const WeatherFetchContext = createContext({
-  weatherDataAPI: null,
-  fetchAndUpdateWeather: () => {},
-});
+export const WeatherFetchContext = createContext();
 
 export const WeatherFetchProvider = ({ children }) => {
-  console.log("WeatherFetchProvider");
   const [weatherDataAPI, setWeatherDataAPI] = useState(null);
 
   const fetchAndUpdateWeather = useCallback(async (city) => {
     try {
       const data = await fetchWeatherData(city);
-      console.log("Data: ",data);
       if (data) {
         setWeatherDataAPI(data); // Update the weather data state
         return data;
@@ -22,10 +16,16 @@ export const WeatherFetchProvider = ({ children }) => {
     } catch (error) {
       console.error('Failed to fetch weather data:', error);
     }
-  }, []);
+  }, []); // If fetchWeatherData is stable, no dependencies needed
+
+  // Memoize context value
+  const contextValue = useMemo(() => ({
+    weatherDataAPI,
+    fetchAndUpdateWeather
+  }), [weatherDataAPI, fetchAndUpdateWeather]);
 
   return (
-    <WeatherFetchContext.Provider value={{ weatherDataAPI, fetchAndUpdateWeather }}>
+    <WeatherFetchContext.Provider value={contextValue}>
       {children}
     </WeatherFetchContext.Provider>
   );

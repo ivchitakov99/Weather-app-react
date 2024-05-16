@@ -3,11 +3,47 @@
     position: relative;
     display:flex;
     height:auto;
-    min-height: 100vh; /* Ensure the container is at least the height of the viewport */
-    overflow-y: auto; /* Add vertical scrolling when content exceeds viewport height */
+    /*min-height: 100vh; /* Ensure the container is at least the height of the viewport */
+    /*overflow-y: auto; /* Add vertical scrolling when content exceeds viewport height */
     text-align: left;
     font-size: var(--font-size-lg);
     color: var(--color-white);
     font-family: var(--font-roboto);
   }
+
+  .logo-search {
+    position:fixed;
+    top:40px;
+    left:121px;
+    left: 8.333vw;
+    height:auto;
+    /*width:82.083vw;*/
+    width:auto;
+    display: flex;
+    justify-content: space-between;
+    z-index: 800;
+    right:100px;
+  }
+
+  @media (min-width: 1600px) { 
+    .home-desktop{
+      font-size: 26px;
+    }
+  }
+
+  @media (max-width: 768px) { 
+    .logo-search{
+      right:39px;
+      left:5.078vw;
+      top:25px;
+    }
+  }
+    
+    @media (max-width: 375px) { 
+      .logo-search{
+        right:21px;
+        left:5.867vw;
+        top:19px;
+      }
+    }
   

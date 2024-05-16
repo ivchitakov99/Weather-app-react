@@ -4,11 +4,10 @@ import {WeatherDetailsInfoComp} from '../weather-details-info-comp';
 import {WeatherContext} from "../../Parent/bg-blur"
 
 const WeatherDetailsInformation = () => {
-  console.log("WeatherDetailsInformation rendering");
   const weatherData = useContext(WeatherContext);  
   return (
     <div className="weather-details-information">
-        <div className="weather-details-information-title">MODERATE RAIN WITH DRIZZLE</div>
+        <h4 className="weather-details-information-title">MODERATE RAIN WITH DRIZZLE</h4>
         {weatherData.map((data, index) => (
             <WeatherDetailsInfoComp key={index} {...data} />
         ))}
