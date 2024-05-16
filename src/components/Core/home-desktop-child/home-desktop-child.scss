@@ -23,12 +23,12 @@
   content: '';
   position: absolute;
   top: -40px; /* Extend beyond the top of the parent */
-  right: -30px; /* Extend beyond the right of the parent */
-  bottom: -5px; /* Extend beyond the bottom of the parent */
-  left: -30px; /* Extend beyond the left of the parent*/
-  backdrop-filter: blur(7px);
+  right: -100px; /* Extend beyond the right of the parent */
+  bottom: -0.8px; /* Extend beyond the bottom of the parent */
+  left: -40px; /* Extend beyond the left of the parent*/
+  backdrop-filter: blur(10px);
   z-index: -1; /* Place it behind the content */
-  border-radius: 20px;
+  /*border-radius: 20px;*/
 }
 
 #weather-form {
@@ -163,6 +163,10 @@
     /*position:absolute;*/
     /*top: -460px;*/
     top:-12px;
+
+    .home-desktop-child::before{
+      display:none
+    }
 
   }
 

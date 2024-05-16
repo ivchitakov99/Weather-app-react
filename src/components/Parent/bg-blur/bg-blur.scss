@@ -3,7 +3,7 @@
   top:0;
   right:0;
   background-color: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(10px);
+  /*backdrop-filter: blur(10px);*/
   border-left: 5px solid rgba(255, 255, 255, 0.14);
   box-sizing: border-box;
   width: 36.875vw;
@@ -24,6 +24,20 @@
   position:fixed;
   height:100vh;
   overflow-y: scroll; /* Add vertical scrolling when content exceeds viewport height */
+  z-index: 700;
+}
+
+.bg-blur::before {
+  content: '';
+  position: fixed;
+  width: 25.764vw;
+  width: calc(25.764vw + 40px + 100px);
+  min-width:360px;
+  right:0px;
+  top: 111.8px; /* Start the blur effect 100px from the top */
+  backdrop-filter: blur(10px);
+  z-index: -1;
+  height: calc(100vh - 111.8px); /* Adjust height to cover from 111px to the bottom */
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -37,13 +51,21 @@
   scrollbar-width: none; /* Firefox */
 }
 
+@media (max-width:1600px) {
+  .bg-blur::before {
+    top: 91.8px; /* Start the blur effect 100px from the top */
+    height: calc(100vh - 91.8px); /* Adjust height to cover from 111px to the bottom */
+  }
+  
+}
+
 @media (max-width: 1440px){
   .bg-blur {
     position: absolute;
     top:0;
     right:0;
     background-color: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(7px);
+    /*backdrop-filter: blur(7px);*/
     border-left: 5px solid rgba(255, 255, 255, 0.14);
     box-sizing: border-box;
     width: 36.875vw;
@@ -96,6 +118,10 @@
       padding:0;
       padding-top:129px;
       padding-bottom:60px;
+    }
+
+    .bg-blur::before{
+      display: none;
     }
 }
 
